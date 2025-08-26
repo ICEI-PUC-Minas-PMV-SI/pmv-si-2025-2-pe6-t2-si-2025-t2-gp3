@@ -1,4 +1,4 @@
-# TÍTULO DO PROJETO
+# GYMFLOW: Desenvolvimento de uma Aplicação Multiplataforma para Registro e Acompanhamento de Treinos de Musculação
 
 `CURSO: Sistemas de Informação`
 
@@ -6,20 +6,22 @@
 
 `SEMESTRE: 6º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto **GymFlow** propõe a criação de uma solução digital prática que auxilie praticantes de musculação no registro, monitoramento e análise de seus treinos. Buscamos substituir métodos manuais, como cadernos e planilhas, que apresentam limitações quanto à organização, confiabilidade e acompanhamento da evolução.
+
+A proposta consiste no desenvolvimento de um aplicativo mobile voltada para o registro dos treinos e uma aplicação web voltada para o acompanhamento estatistico do progresso do usuário nos treinos.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
-* Nome completo do aluno 6
+* Gabriel Pangracio Azevedo
+* Gabriela Moreira Bastos
+* Isadora Gomes Murta
+* Rayane Paiva Reginaldo
+* Thais Camila Gonçalves Costa
+* Vitor Antonio Malafaya da Cruz
 
 ## Orientador
 
-* Nome completo do professor 1
+* Kleber Jacques Ferreira de Souza
 
 # Planejamento
 
