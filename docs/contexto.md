@@ -3,25 +3,33 @@
 Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+Muitos praticantes de musculação registram seus treinos de maneira manual, utilizando cadernos, planilhas ou até mesmo a memória. Esse método, além de pouco prático, trás algumas limitações:
 
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
+* **Falta de organização:** com o tempo o registro manual se torna dificil de manter pois existe a possibilidade de serem perdidos ou esquecidos. Além disso, a análise da evolução de cargas, repetições e séries ao longo dos meses é comprometida quando os dados não são organizados ou centralizados.
+* **Baixa motivação:** a ausência de estatísticas e relátorios claros pode prejudicar a percepção de progresso o que pode reduzir a motivação do praticante de musculação.
+* **Dificuldade no compartilhamento de informações:** o registro manual também trás para os treinadores a dificuldade de acompanhar o desemprenho dos alunos, tornando os ajustes de treino menos precisos.
 
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Um estudo aponta que cerca de **56% dos usuários acessam aplicativos fitness mais de 10 vezes por semana**, demonstrando que há alta demanda por soluções digitais que forneçam registros confiáveis, estatísticas e recursos práticos [(NIMBLE APP GENIE, 2024)](https://www.nimbleappgenie.com/solutions/fitness-app-development).
+
+Outro desafio enfrentado pelos usuários está relacionado ao uso do celular durante os treinos. Muitos acabam se distraíndo facilmente com notificações, redes sociais, mensagens e outros aplicativos. Essa dispersão compromente a eficiencia do treino, já que o tempo de descanso se prolonga mais do que o necessário. 
+
+Fica evidente a necessidade de um aplicativo/sistema que seja pensado para manter a concentração do usuário, que ofereça uma solução prática de registro centralizado dos dados dos treinos e um acompanhamento dos resultados.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+#### Objetivo Geral
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Desenvolver uma aplicação multiplataforma (mobile e web) que possibilite o registro, acompanhamento e análise de treinos de musculação, oferecendo recursos que tornem o processo de registro mais prático, a análise de resultados mais eficiente que proporcione uma percepção de progresso que aumente a motivação do usuário.
+
+#### Objetivos Específicos
+
+- Permitir ao usuário registrar informações detalhadas sobre os exercícios como: numero de repetições, séries e cargas utilizadas, criando um histórico de evolução.
+- Apresentar estatísticas e relatórios de evolução com graficos e indicadores de desemprenho que mostrem ao usuário sua progressão em diferentes exercícios ao longo do tempo.
+- Garantir que o usuário possa acessar o treino pelo celular de maneira prática durante o treino.
+- Garantir que o usuário possa acessar o treino pelo computador de maneira mais detalhada com foco em relátorios e análises de progresso.
+- Oferecer ao usuário uma maneira pratica de controlar o tempo de descanso entre as séries.
+- Criar uma interface minimalista, livre de elementos que possam se tornar distrações, como excesso de notificações ou funcionalidades que não sejam diretamente ligadas ao treino.
 
 ## Justificativa
 
@@ -69,16 +77,16 @@ Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Cla
 
 - [Requisitos Funcionais
  (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
+   correspondem a uma funcionalidade que deve estar presente na
   plataforma (ex: cadastro de usuário).
 - [Requisitos Não Funcionais
   (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
   correspondem a uma característica técnica, seja de usabilidade,
   desempenho, confiabilidade, segurança ou outro (ex: suporte a
   dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+  Lembre-se que cada requisito deve corresponder à uma e somente uma
+  característica alvo da sua solução. Além disso, certifique-se de que
+  todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 ## Restrições
 
