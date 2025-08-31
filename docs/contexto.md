@@ -1,8 +1,16 @@
 # Introdução
 
-A prática de atividades físicas, especialmente a musculação, desempenha um papel essencial na promoção da saúde, no bem-estar e no desenvolvimento físico e emocional dos indivíduos. Contudo, o acompanhamento da evolução nos treinos ainda representa um desafio para muitos praticantes, uma vez que o registro manual de séries, cargas e tempos de descanso pode se tornar pouco prático, desorganizado e sujeito a falhas. É neste contexto que soluções tecnológicas, como softwares e aplicativos especializados, surgem como ferramentas positivas para otimizar esse processo, permitindo que os usuários concentrem seus esforços naquilo que mais importa: a consistência e a progressão nos resultados
+A prática de atividades físicas, especialmente a musculação, desempenha um papel essencial na promoção da saúde, no bem-estar e no desenvolvimento físico e emocional dos indivíduos. Contudo, o acompanhamento da evolução nos treinos ainda representa um desafio para muitos praticantes, uma vez que o registro manual de séries, cargas e tempos de descanso pode se tornar pouco prático, desorganizado e sujeito a falhas. É neste contexto que soluções tecnológicas, como softwares e aplicativos especializados, surgem como ferramentas positivas para otimizar esse processo, permitindo que os usuários concentrem seus esforços naquilo que mais importa: a consistência e a progressão nos resultados.
 
 Um relatório recente publicado pela Polaris Market Research (2024) constatou que o mercado global de aplicativos de fitness foi estimado em US$ 10,56 bilhões em 2024, com projeções de crescimento para US$ 39,35 bilhões em 2034, a uma taxa anual composta de 14,1%. Além disso, dados da Nimble App Genie (2024) indicam que cerca de 56% dos usuários acessam aplicativos fitness mais de 10 vezes por semana, o que demonstra a relevância e a alta demanda por ferramentas digitais que auxiliem no monitoramento da atividade física. Esses números reforçam a importância de sistemas capazes de fornecer registros confiáveis, estatísticas visuais e funcionalidades práticas, garantindo uma experiência mais eficiente e motivadora para os praticantes de musculação.
+
+
+## Problema
+Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
+
+Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+
+Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
 
 > **Links Úteis**:
 > - [YAHOO FINANCE. Fitness Apps Global Industry Report 2025 – Global Fitness App Market Report 2023-2028 Featuring Key Players. Yahoo Finance, [S.l.], 15 set. 2023. Disponível em: https://finance.yahoo.com/news/global-fitness-app-market-report-093300089.html. Acesso em: 22 ago. 2025]
