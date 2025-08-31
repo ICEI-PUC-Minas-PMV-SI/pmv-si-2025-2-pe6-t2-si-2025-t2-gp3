@@ -134,7 +134,36 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 
 # Catálogo de Serviços
 
-Descreva aqui todos os serviços que serão disponibilizados pelo seu projeto, detalhando suas características e funcionalidades.
+Cadastro e Gerenciamento de Treinos 
+- Permite que os usuários criem, editem e excluam treinos completos, definindo séries, repetições, cargas e intervalos de descanso. 
+- Adição de novos treinos com múltiplos exercícios. 
+- Edição de treinos existentes para ajustes de cargas e repetições. 
+- Exclusão de treinos que não são mais necessários. 
+- Visualização organizada de todos os treinos cadastrados, separados por dias ou objetivos. 
+Registro de Exercícios  
+- Serviço que possibilita aos usuários registrar cada exercício realizado durante o treino, incluindo séries, repetições, carga e tempo de descanso. 
+- Registro rápido durante o treino pelo app mobile. 
+- Atualização automática de progresso e histórico de treinos. 
+- Integração com o timer de descanso para controle de intervalos. 
+Timer de Descanso 
+Timer integrado que auxilia os usuários a controlar o tempo de descanso entre séries, garantindo consistência nos treinos. 
+- Configuração de tempo personalizado para cada tipo de treino. 
+- Alertas sonoros e visuais para indicar o início e fim do descanso. 
+- Histórico de utilização para análise de performance. 
+Estatísticas e Gráficos de Desempenho 
+- Serviço que gera gráficos e relatórios visuais sobre o desempenho do usuário, permitindo acompanhamento da evolução ao longo do tempo. 
+- Comparação de séries, repetições e cargas ao longo de dias, semanas ou meses. 
+- Visualização de progresso em gráficos de barras, linhas ou radar. 
+- Relatórios exportáveis para análise detalhada. 
+Gerenciamento de Perfil do Usuário 
+- Permite que o usuário edite informações pessoais, preferências e metas de treino. 
+- Atualização de dados pessoais e objetivos. 
+- Configuração de metas de desempenho, como aumento de carga ou repetições. 
+- Customização da interface e preferências de notificação. 
+Backend e Infraestrutura 
+- Serviços de backend que suportam todas as funcionalidades do front-end web e mobile, garantindo armazenamento, processamento e consistência de dados. 
+- Endpoints para CRUD de treinos, exercícios e perfis. 
+- Armazenamento seguro em banco de dados. 
 
 # Arquitetura da Solução
 
