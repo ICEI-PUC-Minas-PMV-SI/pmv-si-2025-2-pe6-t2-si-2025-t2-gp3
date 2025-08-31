@@ -13,18 +13,38 @@ Descreva também o contexto em que essa aplicação será usada, se  houver: emp
 Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
 
 > **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+> - [YAHOO FINANCE. Fitness Apps Global Industry Report 2025 – Global Fitness App Market Report 2023-2028 Featuring Key Players. Yahoo Finance, [S.l.], 15 set. 2023. Disponível em: https://finance.yahoo.com/news/global-fitness-app-market-report-093300089.html. Acesso em: 22 ago. 2025]
+
+>- [POLARIS MARKET RESEARCH & CONSULTING LLP. Fitness App Market Size Worth USD 39.35 Billion by 2034 | CAGR: 14.1%. [S.l.], fev. 2025. Disponível em: https://www.polarismarketresearch.com/industry-analysis/fitness-app-market?utm_source=chatgpt.com. Acesso em: 22 ago. 2025.]
+
+## Problema
+
+Muitos praticantes de musculação registram seus treinos de maneira manual, utilizando cadernos, planilhas ou até mesmo a memória. Esse método, além de pouco prático, trás algumas limitações:
+
+* **Falta de organização:** com o tempo o registro manual se torna dificil de manter pois existe a possibilidade de serem perdidos ou esquecidos. Além disso, a análise da evolução de cargas, repetições e séries ao longo dos meses é comprometida quando os dados não são organizados ou centralizados.
+* **Baixa motivação:** a ausência de estatísticas e relátorios claros pode prejudicar a percepção de progresso o que pode reduzir a motivação do praticante de musculação.
+* **Dificuldade no compartilhamento de informações:** o registro manual também trás para os treinadores a dificuldade de acompanhar o desemprenho dos alunos, tornando os ajustes de treino menos precisos.
+
+Um estudo aponta que cerca de **56% dos usuários acessam aplicativos fitness mais de 10 vezes por semana**, demonstrando que há alta demanda por soluções digitais que forneçam registros confiáveis, estatísticas e recursos práticos [(NIMBLE APP GENIE, 2024)](https://www.nimbleappgenie.com/solutions/fitness-app-development).
+
+Outro desafio enfrentado pelos usuários está relacionado ao uso do celular durante os treinos. Muitos acabam se distraíndo facilmente com notificações, redes sociais, mensagens e outros aplicativos. Essa dispersão compromente a eficiencia do treino, já que o tempo de descanso se prolonga mais do que o necessário. 
+
+Fica evidente a necessidade de um aplicativo/sistema que seja pensado para manter a concentração do usuário, que ofereça uma solução prática de registro centralizado dos dados dos treinos e um acompanhamento dos resultados.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+#### Objetivo Geral
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Desenvolver uma aplicação multiplataforma (mobile e web) que possibilite o registro, acompanhamento e análise de treinos de musculação, oferecendo recursos que tornem o processo de registro mais prático, a análise de resultados mais eficiente que proporcione uma percepção de progresso que aumente a motivação do usuário.
+
+#### Objetivos Específicos
+
+- Permitir ao usuário registrar informações detalhadas sobre os exercícios como: numero de repetições, séries e cargas utilizadas, criando um histórico de evolução.
+- Apresentar estatísticas e relatórios de evolução com graficos e indicadores de desemprenho que mostrem ao usuário sua progressão em diferentes exercícios ao longo do tempo.
+- Garantir que o usuário possa acessar o treino pelo celular de maneira prática durante o treino.
+- Garantir que o usuário possa acessar o treino pelo computador de maneira mais detalhada com foco em relátorios e análises de progresso.
+- Oferecer ao usuário uma maneira pratica de controlar o tempo de descanso entre as séries.
+- Criar uma interface minimalista, livre de elementos que possam se tornar distrações, como excesso de notificações ou funcionalidades que não sejam diretamente ligadas ao treino.
 
 ## Justificativa
 
@@ -37,51 +57,73 @@ O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estat�
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+O principal público-alvo do sistema são os praticantes de musculação em diferentes níveis de experiência, desde iniciantes que desejam estruturar seus primeiros treinos até atletas mais avançados que buscam acompanhar com precisão sua evolução. Esses usuários compõem um grupo fundamental no contexto da atividade física, pois estão constantemente em busca de ferramentas que facilitem o monitoramento do desempenho, a organização dos treinos e a manutenção da motivação. Espera-se que o software auxilie esse público a registrar seus exercícios de maneira prática, acompanhar estatísticas detalhadas e visualizar sua progressão de forma clara e objetiva.
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+Outro público de interesse são os profissionais da área fitness, como personal trainers e instrutores de academia, que poderão utilizar o sistema para gerenciar planos de treino de seus alunos, acompanhar métricas de desempenho e oferecer um acompanhamento mais personalizado. Dessa forma, o software não se limita apenas ao uso individual, mas também se apresenta como um recurso de apoio para profissionais que desejam otimizar a forma como orientam e acompanham o progresso de seus clientes.
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+## Personas
+
+| ID   | Nome     | Idade | Perfil                     | Conhecimento de Tecnologia | História do Usuário                                                                                                         | Objetivos / Necessidades                                       | Comportamento / Observações                                   |
+|------|----------|-------|----------------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|---------------------------------------------------------------|
+| P-01 | Marcos   | 22    | Iniciante                  | Básico                     | Começou na academia há 3 meses; precisa de app simples que explique exercícios e registre progresso.                         | Organizar primeiros treinos, aprender exercícios corretos      | Prefere interfaces simples, instruções claras                 |
+| P-02 | Angélica | 28    | Intermediária              | Intermediário              | Treina há 2 anos; procura acompanhar evolução em gráficos e planejar treinos de forma organizada.                            | Controlar séries e repetições, acompanhar evolução em gráficos | Valoriza estatísticas e relatórios visuais                    |
+| P-03 | Pedro    | 32    | Avançado / Atleta          | Avançado                   | Atleta de alto desempenho; precisa de controle detalhado de séries, repetições, cargas, descanso, exportar dados.            | Registrar treinos detalhados, controlar cargas, analisar desempenho | Busca controle máximo, integra dados com outros apps       |
+| P-04 | Gabriela | 30    | Personal Trainer/Instrutora| Intermediário-Avançado     | Acompanha alunos; precisa de sistema para monitorar progresso, criar treinos personalizados e relatórios resumidos.           | Acompanhar alunos, planejar treinos, monitorar evolução        | Necessita recursos de gestão múltipla e relatórios resumidos |
+| P-05 | Mateus   | 25    | Intermediário              | Intermediário              | Treina há 1 ano; busca registrar treinos equilibrados (dados suficientes para evolução, mas sem complicações).                | Criar treinos personalizados, controlar progresso              | Procura balancear praticidade e detalhamento dos dados        |
+
+## Stakeholders
+
+| ID   | Stakeholder | Tipo          | Interesse / Necessidade                                                 | Influência no Sistema                                  |
+|------|-------------|---------------|--------------------------------------------------------------------------|--------------------------------------------------------|
+| ST-01| Marcos      | Usuário final | Facilidade de uso, orientação clara, evolução visível                    | ALTA – feedback sobre usabilidade                      |
+| ST-02| Angélica    | Usuário final | Visualização de gráficos, acompanhamento de desempenho                   | MÉDIA – impacto no desenvolvimento de dashboards       |
+| ST-03| Pedro       | Usuário final | Controle detalhado de treinos, integração com outros apps                 | ALTA – requisitos avançados do sistema                 |
+| ST-04| Gabriela    | Profissional  | Gestão de alunos, criação de treinos, relatórios resumidos                | ALTA – define funcionalidades profissionais            |
+| ST-05| Mateus      | Usuário final | Equilíbrio entre praticidade e detalhamento                               | MÉDIA – valida funcionalidades intermediárias          |
+
 
 # Especificações do Projeto
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
+As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. 
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+| ID     | Módulo   | Descrição do Requisito                                                                 | Prioridade |
+|--------|----------|-----------------------------------------------------------------------------------------|------------|
+| RF-001 | Web      | Exibir gráficos e estatísticas detalhadas sobre o desempenho do usuário nos treinos.    | ALTA       |
+| RF-002 | Web      | Permitir criar, visualizar, atualizar e excluir registros de treinos já cadastrados.    | ALTA       |
+| RF-003 | Web      | Permitir ao usuário adicionar novos treinos com séries, repetições e cargas.            | ALTA       |
+| RF-004 | Web      | Permitir atualizar informações pessoais, preferências e objetivos do usuário.           | MÉDIA      |
+| RF-005 | Web      | Autenticação segura para acesso ao sistema.                                             | ALTA       |
+| RF-006 | Mobile   | Permitir ao usuário registrar cada exercício realizado, incluindo séries e repetições.  | ALTA       |
+| RF-007 | Mobile   | Oferecer um timer funcional para controlar o tempo de descanso entre séries.            | MÉDIA      |
+| RF-008 | Mobile   | Permitir adicionar treinos e estruturá-los para registro e acompanhamento no app.       | ALTA       |
+| RF-009 | Mobile   | Permitir atualização de dados pessoais e ajustes de perfil no aplicativo.               | MÉDIA      |
+| RF-010 | Mobile   | Autenticação segura para acesso ao aplicativo.                                          | ALTA       |
+| RF-011 | Backend  | Armazenar todos os dados do usuário, treinos, exercícios e estatísticas de forma segura.| ALTA       |
+| RF-012 | Backend  | Criar endpoints para suportar todas as operações do front-end web e mobile.             | ALTA       |
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+| ID     | Requisito Não Funcional | Descrição                                                                                          | Prioridade |
+|--------|--------------------------|----------------------------------------------------------------------------------------------------|------------|
+| RNF-001| Desempenho               | O sistema deve responder rapidamente às solicitações do usuário, exibindo estatísticas e registros em até 2 segundos. | ALTA       |
+| RNF-002| Usabilidade              | A interface deve ser intuitiva, simples e consistente, permitindo que o usuário realize as tarefas sem necessidade de treinamento avançado. | ALTA       |
+| RNF-003| Confiabilidade           | O sistema deve garantir a integridade dos dados, evitando perda de informações durante falhas ou quedas de conexão. | ALTA       |
+| RNF-004| Segurança                | As informações dos usuários devem ser protegidas, incluindo autenticação segura e armazenamento criptografado de senhas. | ALTA       |
+| RNF-005| Escalabilidade           | O sistema deve suportar crescimento no número de usuários e registros sem perda de desempenho.      | MÉDIA      |
+| RNF-006| Compatibilidade          | O sistema deve funcionar em diferentes navegadores (web) e versões comuns de sistemas Android e iOS (mobile). | MÉDIA      |
+| RNF-007| Disponibilidade          | O sistema deve estar disponível 95% do tempo, permitindo acesso constante a treinos e registros.   | ALTA       |
+| RNF-008| Manutenibilidade         | O código deve ser estruturado e documentado de forma que futuras modificações e atualizações sejam simples de implementar. | MÉDIA      |
+| RNF-009| Portabilidade            | O sistema deve ser facilmente migrável para outras plataformas de cloud sem grandes alterações.    | BAIXA      |
+| RNF-010| Backup e Recuperação     | Deve existir mecanismo de backup automático periódico e restauração de dados em caso de falha.     | ALTA       |
+| RNF-011| Responsividade           | A interface web e mobile deve se adaptar a diferentes tamanhos de tela e resoluções.               | ALTA       |
+| RNF-012| Log e Auditoria          | O sistema deve registrar atividades críticas do usuário e eventos do sistema para análise posterior.| MÉDIA      |
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+
 
 ## Restrições
 
@@ -109,43 +151,40 @@ Definição de como o software é estruturado em termos dos componentes que faze
 ![arq](https://github.com/user-attachments/assets/b9402e05-8445-47c3-9d47-f11696e38a3d)
 
 
-## Tecnologias Utilizadas
-
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
-
-## Hospedagem
-
-Explique como a hospedagem e o lançamento da plataforma foi feita.
 
 # Planejamento
 
 ##  Quadro de tarefas
 
-> Apresente a divisão de tarefas entre os membros do grupo e o acompanhamento da execução, conforme o exemplo abaixo.
 
-### Semana 1
+### Semanas 1 e 2 (Etapa 1)
 
-Atualizado em: 21/04/2024
+Atualizado em: 31/08/2025
 
-| Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
-| :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Introdução | 01/02/2024     | 07/02/2024 | ✔️    | 05/02/2024      |
-| AlunaZ        | Objetivos    | 03/02/2024     | 10/02/2024 | 📝    |                 |
-| AlunoY        | Histórias de usuário  | 01/01/2024     | 07/01/2005 | ⌛     |                 |
-| AlunoK        | Personas 1  |    01/01/2024        | 12/02/2005 | ❌    |       |
+| Responsável   | Tarefa/Requisito           | Iniciado em | Status | Terminado em |
+| :------------ | :------------------------  | :---------- | :----- | :----------- |
+| Isadora       | Público alvo                | 11/08/2024  | ✔️     | 31/08/2024   |
+| Gabriela      | Catálogo de Serviços        | 11/08/2024  | ✔️     | 31/08/2024   |
+| Vitor         | Arquitetura da solução      | 11/08/2024  | ✔️     | 31/08/2024   |
+| Thais         | Introdução                  | 11/08/2024  | ✔️     | 31/08/2024   |
+| Rayane        | Problema e Objetivos        | 11/08/2024  | ✔️     | 31/08/2024   |
+| Gabriel       | Justificativa               | 11/08/2024  | ✔️     | 31/08/2024   |
+| Todos         | Planejamento da Etapa 1     | 11/08/2024  | ✔️     | 31/08/2024   |
 
-#### Semana 2
+#### Semana 3 (Etapa 2)
 
-Atualizado em: 21/04/2024
+Atualizado em: 01/09/2025
 
-| Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
-| :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Página inicial   | 01/02/2024     | 07/03/2024 | ✔️    | 05/02/2024      |
-| AlunaZ        | CSS unificado    | 03/02/2024     | 10/03/2024 | 📝    |                 |
-| AlunoY        | Página de login  | 01/02/2024     | 07/03/2024 | ⌛     |                 |
-| AlunoK        | Script de login  |  01/01/2024    | 12/03/2024 | ❌    |       |
+| Responsável   | Tarefa/Requisito                                               | Iniciado em | Status | Terminado em |
+| :------------ | :------------------------------------------------------------  | :---------- | :----- | :----------- |
+| Rayane        | Início do desenvolvimento backend                               | 01/09/2025  | 📝     | 07/09/2025   |
+| Vitor         | Início do desenvolvimento backend                               | 01/09/2025  | 📝     | 07/09/2025   |
+| Isadora       | Início do desenvolvimento mobile                               | 01/09/2025  | 📝     | 07/09/2025   |
+| Thais         | Início do desenvolvimento mobile                               | 01/09/2025  | 📝     | 07/09/2025   |
+| Gabriel       | Início do desenvolvimento front end                            | 01/09/2025  | 📝     | 07/09/2025   |
+| Gabriela      | Início do desenvolvimento front end                            | 01/09/2025  | 📝     | 07/09/2025   |
+| Todos         | Verificação e aprovação das etapas realizadas pelos colegas; preenchimento do Figma do projeto com as informações requisitadas | 01/09/2025  | 📝     | 07/09/2025   |
+
 
 Legenda:
 - ✔️: terminado
