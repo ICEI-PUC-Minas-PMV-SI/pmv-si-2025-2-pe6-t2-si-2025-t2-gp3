@@ -35,9 +35,14 @@ Desenvolver uma aplicação multiplataforma (mobile e web) que possibilite o reg
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+De acordo com a Yahoo Finance (2023), o mercado global de aplicativos fitness movimentou aproximadamente US$ 12,1 bilhões em 2024, com projeções de alcançar US$ 25,8 bilhões até 2030, apresentando um crescimento médio anual de 13,5%. Já a pesquisa conduzida pela Polaris Market Research (2024) aponta que esse mercado poderá atingir US$ 39,35 bilhões até 2034, refletindo a demanda crescente por soluções digitais que auxiliem no acompanhamento da atividade física. Ainda segundo a Nimble App Genie (2024), cerca de 56% dos usuários acessam aplicativos fitness mais de 10 vezes por semana, o que evidencia não apenas a popularidade dessas ferramentas, mas também sua relevância na rotina de pessoas que buscam evolução constante em seus treinos.
+Diante desse cenário, percebe-se uma lacuna importante: embora existam diversos aplicativos de fitness, poucos oferecem um foco específico no registro detalhado de treinos de musculação, com funcionalidades integradas que permitam visualizar gráficos de evolução, organizar séries e repetições, controlar tempos de descanso e personalizar metas individuais. A ausência de um sistema voltado para essas necessidades compromete a experiência do praticante, que muitas vezes se vê limitado a registros manuais, pouco práticos e sujeitos a falhas.
+A criação de um software com esse propósito visa não apenas facilitar a vida do usuário, mas também promover maior engajamento, motivação e consistência nos treinos. Espera-se que, com a implementação do sistema, o praticante possa visualizar sua evolução de maneira clara, estabelecer metas mais realistas e sentir-se mais motivado a manter sua rotina de exercícios. Além disso, ao oferecer um recurso acessível e de fácil utilização, o projeto tem potencial de impactar positivamente tanto iniciantes quanto atletas mais avançados.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+Ref:
+NIMBLE APPGENIE. Fitness App Development Stats That Will Blow Your Mind!. [S.l.], 2024. Disponível em: https://www.nimbleappgenie.com/blogs/workout-app-development/. Acesso em: 22 ago. 2025.
+POLARIS MARKET RESEARCH & CONSULTING LLP. Fitness App Market Size Worth USD 39.35 Billion by 2034 | CAGR: 14.1%. [S.l.], fev. 2025. Disponível em: https://www.polarismarketresearch.com/industry-analysis/fitness-app-market. Acesso em: 22 ago. 2025.
+YAHOO FINANCE. Fitness Apps Global Industry Report 2023-2028 Featuring Key Players. [S.l.], 15 set. 2023. Disponível em: https://finance.yahoo.com/news/fitness-apps-global-industry-report-171600406.html. Acesso em: 22 ago. 2025.
 
 > **Links Úteis**:
 > - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
