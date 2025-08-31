@@ -138,9 +138,14 @@ Descreva aqui todos os serviços que serão disponibilizados pelo seu projeto, d
 
 # Arquitetura da Solução
 
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
+O sistema será desenvolvido com arquitetura distribuída, integrando aplicações web, mobile e um backend centralizado.
 
-![arq](https://github.com/user-attachments/assets/b9402e05-8445-47c3-9d47-f11696e38a3d)
+Frontend Web: acessível via navegador, voltado para visualização de estatísticas, gráficos e gestão de treinos.
+Aplicativo Mobile: utilizado pelos usuários na academia para registrar exercícios, controlar tempo de descanso e editar perfis.
+Backend (API + Banco de Dados): hospedado em nuvem, responsável por processar requisições, manter a consistência dos dados e fornecer endpoints para web e mobile.
+Banco de Dados Relacional: armazenará treinos, perfis e registros de exercícios.
+
+![arq](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t2-si-2025-t2-gp3/commit/4aeec96420cf131a67e242372e4d6c5f09b7e17a#diff-2fd485bdce67a283eeb637f26c2bd7e16b0be7c171832ecf43e9b44e29e5397f)
 
 
 
