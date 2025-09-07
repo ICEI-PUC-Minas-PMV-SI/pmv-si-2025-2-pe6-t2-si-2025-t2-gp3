@@ -39,11 +39,6 @@ De acordo com a Yahoo Finance (2023), o mercado global de aplicativos fitness mo
 Diante desse cenário, percebe-se uma lacuna importante: embora existam diversos aplicativos de fitness, poucos oferecem um foco específico no registro detalhado de treinos de musculação, com funcionalidades integradas que permitam visualizar gráficos de evolução, organizar séries e repetições, controlar tempos de descanso e personalizar metas individuais. A ausência de um sistema voltado para essas necessidades compromete a experiência do praticante, que muitas vezes se vê limitado a registros manuais, pouco práticos e sujeitos a falhas.
 A criação de um software com esse propósito visa não apenas facilitar a vida do usuário, mas também promover maior engajamento, motivação e consistência nos treinos. Espera-se que, com a implementação do sistema, o praticante possa visualizar sua evolução de maneira clara, estabelecer metas mais realistas e sentir-se mais motivado a manter sua rotina de exercícios. Além disso, ao oferecer um recurso acessível e de fácil utilização, o projeto tem potencial de impactar positivamente tanto iniciantes quanto atletas mais avançados.
 
-Ref:
-NIMBLE APPGENIE. Fitness App Development Stats That Will Blow Your Mind!. [S.l.], 2024. Disponível em: https://www.nimbleappgenie.com/blogs/workout-app-development/. Acesso em: 22 ago. 2025.
-POLARIS MARKET RESEARCH & CONSULTING LLP. Fitness App Market Size Worth USD 39.35 Billion by 2034 | CAGR: 14.1%. [S.l.], fev. 2025. Disponível em: https://www.polarismarketresearch.com/industry-analysis/fitness-app-market. Acesso em: 22 ago. 2025.
-YAHOO FINANCE. Fitness Apps Global Industry Report 2023-2028 Featuring Key Players. [S.l.], 15 set. 2023. Disponível em: https://finance.yahoo.com/news/fitness-apps-global-industry-report-171600406.html. Acesso em: 22 ago. 2025.
-
 > **Links Úteis**:
 > - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
