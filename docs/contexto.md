@@ -121,8 +121,6 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 | RST-006 | Versionamento       | O código deve ser versionado em repositório remoto.          |
 | RST-007 | Integração Contínua | O **backend** deve ter configurado uma pipeline para rodar testes automatizados. |
 
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
 # Catálogo de Serviços
 
 O sistema que será desenvolvido vai oferecer um conjunto de serviços voltados ao gerenciamento e acompanhamento de treinos, ele vai contemplar tanto as funcionalidades voltadas ao usuário final quanto uma infraestrutura para sustentar a aplicação.
@@ -149,6 +147,22 @@ Backend (API + Banco de Dados): hospedado em nuvem, responsável por processar r
 Banco de Dados Relacional: armazenará treinos, perfis e registros de exercícios.
 
 ![Arquitetura Distribuida](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t2-si-2025-t2-gp3/raw/main/docs/img/arqdistribuida.png)
+
+# Tecnologias Utilizadas:
+
+
+
+|                    |     FRONTEND     |    MOBILE    |     BACKEND     |
+| ------------------ | :--------------: | :----------: | :-------------: |
+| **LINGUAGENS**     | JavaScript, HTML |  TypeScript  |      Java       |
+| **FRAMEWORKS**     |        -         |    React     |   Spring Boot   |
+| **UI/DESIGN**      |       CSS        |      -       |        -        |
+| **TESTES**         |        -         |      -       | Junit, Mockito  |
+| **CI/CD**          |        -         |      -       | GitHub Actions  |
+| **BANCO DE DADOS** |        -         | AsyncStorage |   PostgreSQL    |
+| **HOSPEDAGEM**     |      Vercel      |      -       | Render, Railway |
+| **CONTAINERS**     |        -         |      -       |     Docker      |
+| **AUTENTICACAO**   |        -         |      -       | Spring Security |
 
 # Planejamento
 
