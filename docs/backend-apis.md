@@ -25,32 +25,338 @@ Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs
 
 ## API Endpoints
 
-[Liste os principais endpoints da API, incluindo as operações disponíveis, os parâmetros esperados e as respostas retornadas.]
-
-### Endpoint 1
+### Buscar todos os exercicios
 - Método: GET
-- URL: /endpoint1
-- Parâmetros:
-  - param1: [descrição]
+
+- URL: /api/exercicios
+
 - Resposta:
   - Sucesso (200 OK)
-    ```
+    ```json
     {
-      "message": "Success",
-      "data": {
-        ...
-      }
+      "exercicios": [
+        {
+          "id": 0,
+          "nome": "string",
+          "grupoMuscular": "PEITO",
+          "equipamento": "BARRA"
+        }
+      ]
     }
     ```
-  - Erro (4XX, 5XX)
-    ```
+    
+  - Erro (400) - Requisição inválida
+  
+  - Erro (404) - Recurso não encontrado
+  
+  - Erro (500) - Erro interno do servidor
+
+
+
+### Cadastro de exercicios
+
+* Método: POST
+
+* URL: /api/exercicios
+
+* Requisição: 
+
+  ```json
+  {
+    "nome": "string",
+    "grupoMuscular": "PEITO",
+    "equipamento": "BARRA"
+  }
+  ```
+
+* Resposta: 
+
+  * Sucesso (201 CREATED)
+
+    ```json
     {
-      "message": "Error",
-      "error": {
-        ...
-      }
+      "id": 0,
+      "nome": "string",
+      "grupoMuscular": "PEITO",
+      "equipamento": "BARRA"
     }
     ```
+
+  * Erro (400) - Requisição inválida
+
+  * Erro (404) - Recurso não encontrado
+
+  * Erro (500) - Erro interno do servidor
+
+
+
+### Cadastro de series
+
+* Metodo: POST
+
+* URL: /api/series
+
+* Requisição:
+
+  ```json
+  {
+    "exercicioFichaId": 0,
+    "data": "2025-09-29",
+    "carga": 0.1,
+    "repeticoes": 0
+  }
+  ```
+
+* Resposta:
+
+  * Sucesso (201 CREATED)
+
+    ```json
+    {
+      "serieId": 0,
+      "data": "2025-09-29",
+      "carga": 0.1,
+      "repeticoes": 0
+    }
+    ```
+
+  * Erro (400) - Requisição inválida
+
+  * Erro (404) - Recurso não encontrado
+
+  * Erro (500) - Erro interno do servidor
+
+
+
+### Cadastro de Treinos
+
+* Método: POST
+
+* URL: /api/treinos
+
+* Requisição:
+
+  ```json
+  {
+    "nome": "string",
+    "dataInicio": "2025-09-29",
+    "dataFim": "2025-09-29"
+  }
+  ```
+
+* Resposta:
+
+  * Sucesso (201 - CREATED)
+
+    ```json
+    {
+      "id": 0,
+      "nome": "string",
+      "dataInicio": "2025-09-29",
+      "dataFim": "2025-09-29"
+    }
+    ```
+
+  * Erro (400) - Requisição inválida
+
+  * Erro (404) - Recurso não encontrado
+
+  * Erro (500) - Erro interno do servidor
+
+
+
+### Busca de treinos cadastrados
+
+* Método: GET
+
+* URL: /api/treinos
+
+* Busca paginada. Parametros de busca:
+
+  * page
+
+  * size
+
+  * sort
+
+  * direction
+
+* Resposta:
+
+  ```json
+  {
+    "total": 0,
+    "page": 0,
+    "totalPages": 0,
+    "size": 0,
+    "treinos": [
+      {
+        "id": 0,
+        "nome": "string",
+        "dataInicio": "2025-10-02",
+        "dataFim": "2025-10-02"
+      }
+    ]
+  }
+  ```
+
+  
+
+
+### Cadastro de ficha
+
+* Metodo: POST
+
+* URL: /api/fichas
+
+* Requisição:
+
+  ```json
+  {
+    "treinoId": 0,
+    "diaSemana": "SEGUNDA"
+  }
+  ```
+
+* Resposta:
+
+  * Sucesso (201 - CREATED)
+
+    ```json
+    {
+      "id": 0,
+      "diaSemana": "SEGUNDA"
+    }
+    ```
+
+  * Erro (400) - Requisição inválida
+
+  * Erro (404) - Recurso não encontrado
+
+  * Erro (500) - Erro interno do servidor
+
+
+
+### Cadastro de exercicios na ficha
+
+* Metodo: 
+
+* URL:
+
+* Requisição:
+
+  ```json
+  {
+    "fichaId": 0,
+    "exercicioId": 0,
+    "carga": 0.1,
+    "observacao": "string",
+    "quantidadeDeSeries": 0,
+    "minimoRepeticoes": 0,
+    "maximoRepeticoes": 0,
+    "descansoEmSegundos": 0
+  }
+  ```
+
+* Resposta:
+
+  * Sucesso (201 - CREATED)
+
+    ```json
+    {
+      "exercicioFichaId": 0,
+      "fichaId": 0,
+      "exercicioId": 0,
+      "carga": 0.1,
+      "observacao": "string",
+      "quantidadeDeSeries": 0,
+      "minimoRepeticoes": 0,
+      "maximoRepeticoes": 0,
+      "descansoEmSegundos": 0
+    }
+    ```
+
+  * Erro (400) - Requisição inválida
+
+  * Erro (404) - Recurso não encontrado
+
+  * Erro (500) - Erro interno do servidor
+
+
+
+### Busca todas as fichas cadastradas
+
+* Método: GET
+
+* URL: /api/fichas
+
+* Busca paginada. Parametros de busca:
+
+  * page
+
+  * size
+
+  * sort
+
+  * direction
+
+* Resposta:
+
+  ```json
+  {
+    "total": 0,
+    "page": 0,
+    "totalPages": 0,
+    "size": 0,
+    "fichas": [
+      {
+        "id": 0,
+        "diaSemana": "SEGUNDA"
+      }
+    ]
+  }
+  ```
+
+  
+
+### Busca de exercicios de uma ficha
+
+* Método: GET
+
+* URL: /api/fichas/exercicio
+
+* Busca paginada. Parametros de busca:
+
+  * page
+
+  * size
+
+  * sort
+
+  * direction
+
+* Resposta:
+
+  ```json
+  {
+    "exerciciosDaFicha": [
+      {
+        "exercicioFichaId": 0,
+        "nome": "string",
+        "grupoMuscular": "PEITO",
+        "equipamento": "BARRA",
+        "carga": 0.1,
+        "observacao": "string",
+        "quantidadeDeSeries": 0,
+        "minimoRepeticoes": 0,
+        "maximoRepeticoes": 0,
+        "descansoEmSegundos": 0
+      }
+    ]
+  }
+  ```
+
+  
 
 ## Considerações de Segurança
 
