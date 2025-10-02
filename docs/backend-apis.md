@@ -326,15 +326,9 @@ Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs
 
 * URL: /api/fichas/exercicio
 
-* Busca paginada. Parametros de busca:
+* Parametros de busca:
 
-  * page
-
-  * size
-
-  * sort
-
-  * direction
+  * idFicha  
 
 * Resposta:
 
