@@ -19,9 +19,17 @@ O primeiro passo é definir os objetivos da sua API. O que você espera alcança
 
 ## Tecnologias Utilizadas
 
-Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs Web. A tecnologia certa para o seu projeto dependerá dos seus objetivos, dos seus clientes e dos recursos que a API deve fornecer.
-
-[Lista das tecnologias principais que serão utilizadas no projeto.]
+|                    |     FRONTEND     |    MOBILE    |     BACKEND     |
+| ------------------ | :--------------: | :----------: | :-------------: |
+| **LINGUAGENS**     | JavaScript, HTML |  TypeScript  |      Java       |
+| **FRAMEWORKS**     |        -         |    React     |   Spring Boot   |
+| **UI/DESIGN**      |       CSS        |      -       |        -        |
+| **TESTES**         |        -         |      -       | Junit, Mockito  |
+| **CI/CD**          |        -         |      -       | GitHub Actions  |
+| **BANCO DE DADOS** |        -         | AsyncStorage |   PostgreSQL    |
+| **HOSPEDAGEM**     |      Vercel      |      -       | Render, Railway |
+| **CONTAINERS**     |        -         |      -       |     Docker      |
+| **AUTENTICACAO**   |        -         |      -       | Spring Security |
 
 ## API Endpoints
 
@@ -363,7 +371,13 @@ Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs
 
 ## Considerações de Segurança
 
-[Discuta as considerações de segurança relevantes para a aplicação distribuída, como autenticação, autorização, proteção contra ataques, etc.]
+Por se tratar de uma aplicação que envolve armazenamento e troca de dados sensíveis de usuários, foram definidos mecanismos de segurança para proteger a PAI e os serviços integrados. As definições são:
+
+* **Autenticação** com JWT – JSON Web Token.
+* **Autorização** com o controle de acesso aos recursos com base nas permissões do usuário autenticado.
+* **Expiração de tokens.** Os tokens de autenticação terão tempo de expiração definido.
+* **Configuração de CORS** para permitir apenas domínios autorizados acessarem a API.
+* **Armazenamento seguro.** Senhas de usuário serão armazenadas utilizando hash seguro, e dados sensíveis não serão expostos em logs ou respostas da API.
 
 ## Implantação
 
