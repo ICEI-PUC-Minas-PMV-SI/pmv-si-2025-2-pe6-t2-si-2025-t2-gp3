@@ -51,8 +51,6 @@ Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs
   
   - Erro (500) - Erro interno do servidor
 
-
-
 ### Cadastro de exercicios
 
 * Método: POST
@@ -87,8 +85,6 @@ Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs
   * Erro (404) - Recurso não encontrado
 
   * Erro (500) - Erro interno do servidor
-
-
 
 ### Cadastro de series
 
@@ -126,8 +122,6 @@ Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs
 
   * Erro (500) - Erro interno do servidor
 
-
-
 ### Cadastro de Treinos
 
 * Método: POST
@@ -163,8 +157,6 @@ Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs
 
   * Erro (500) - Erro interno do servidor
 
-
-
 ### Busca de treinos cadastrados
 
 * Método: GET
@@ -183,24 +175,30 @@ Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs
 
 * Resposta:
 
-  ```json
-  {
-    "total": 0,
-    "page": 0,
-    "totalPages": 0,
-    "size": 0,
-    "treinos": [
-      {
-        "id": 0,
-        "nome": "string",
-        "dataInicio": "2025-10-02",
-        "dataFim": "2025-10-02"
-      }
-    ]
-  }
-  ```
+  * Sucesso (200 OK)
 
-  
+    ```json
+    {
+      "total": 0,
+      "page": 0,
+      "totalPages": 0,
+      "size": 0,
+      "treinos": [
+        {
+          "id": 0,
+          "nome": "string",
+          "dataInicio": "2025-10-02",
+          "dataFim": "2025-10-02"
+        }
+      ]
+    }
+    ```
+
+  * Sucesso (204) - Sem treinos cadastrados
+
+  * Erro (400) - Requisição inválida
+
+  * Erro (500) - Erro interno do servidor
 
 
 ### Cadastro de ficha
@@ -234,8 +232,6 @@ Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs
   * Erro (404) - Recurso não encontrado
 
   * Erro (500) - Erro interno do servidor
-
-
 
 ### Cadastro de exercicios na ficha
 
@@ -282,8 +278,6 @@ Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs
 
   * Erro (500) - Erro interno do servidor
 
-
-
 ### Busca todas as fichas cadastradas
 
 * Método: GET
@@ -302,22 +296,29 @@ Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs
 
 * Resposta:
 
-  ```json
-  {
-    "total": 0,
-    "page": 0,
-    "totalPages": 0,
-    "size": 0,
-    "fichas": [
-      {
-        "id": 0,
-        "diaSemana": "SEGUNDA"
-      }
-    ]
-  }
-  ```
+  * Sucesso (200 OK)
 
-  
+    ```json
+    {
+      "total": 0,
+      "page": 0,
+      "totalPages": 0,
+      "size": 0,
+      "fichas": [
+        {
+          "id": 0,
+          "diaSemana": "SEGUNDA"
+        }
+      ]
+    }
+    ```
+
+  * Sucesso (204) - Sem fichas cadastradas
+
+  * Erro (400) - Requisição inválida
+
+  * Erro (500) - Erro interno do servidor
+
 
 ### Busca de exercicios de uma ficha
 
@@ -337,26 +338,34 @@ Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs
 
 * Resposta:
 
-  ```json
-  {
-    "exerciciosDaFicha": [
-      {
-        "exercicioFichaId": 0,
-        "nome": "string",
-        "grupoMuscular": "PEITO",
-        "equipamento": "BARRA",
-        "carga": 0.1,
-        "observacao": "string",
-        "quantidadeDeSeries": 0,
-        "minimoRepeticoes": 0,
-        "maximoRepeticoes": 0,
-        "descansoEmSegundos": 0
-      }
-    ]
-  }
-  ```
+  * Sucesso (200 OK)
 
-  
+    ```json
+    {
+      "exerciciosDaFicha": [
+        {
+          "exercicioFichaId": 0,
+          "nome": "string",
+          "grupoMuscular": "PEITO",
+          "equipamento": "BARRA",
+          "carga": 0.1,
+          "observacao": "string",
+          "quantidadeDeSeries": 0,
+          "minimoRepeticoes": 0,
+          "maximoRepeticoes": 0,
+          "descansoEmSegundos": 0
+        }
+      ]
+    }
+    ```
+
+  * Sucesso (204) - Sem exercicios cadastrados na ficha
+
+  * Erro (400) - Requisição inválida
+
+  * Erro (500) - Erro interno do servidor
+
+
 
 ## Considerações de Segurança
 
