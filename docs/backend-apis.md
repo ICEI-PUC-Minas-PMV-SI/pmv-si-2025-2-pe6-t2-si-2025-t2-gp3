@@ -14,8 +14,80 @@ O primeiro passo é definir os objetivos da sua API. O que você espera alcança
 
 
 ## Modelagem da Aplicação
-[Descreva a modelagem da aplicação, incluindo a estrutura de dados, diagramas de classes ou entidades, e outras representações visuais relevantes.]
+A modelagem da aplicação contempla as seguintes entidades principais: 
 
+1. **Usuário:** 
+
+   ```java
+   public class Usuarios {
+   
+     private Long id;
+     private String nome;
+     private Integer CPF;
+     private String email;
+     private String senha;
+     private LocalDate dataNascimento;
+   }
+   ```
+
+2. **Treino:**
+
+   ```java
+   public class Treino {
+   
+     private Long id;
+     private String nome;
+     private LocalDate dataInicio;
+     private LocalDate dataFim;
+     private Set<Ficha> fichas;
+   }
+   
+   public class Ficha {
+   
+     private Long id;
+     private DiaSemana diaSemana;
+     private Set<ExercicioFicha> exercicios;
+   }
+   
+   public class ExercicioFicha {
+   
+     private Long exercicioFichaId;
+     private Long exercicioId;
+     private Long fichaId;
+     private Double carga;
+     private String observacao;
+     private Integer quantidadeDeSeries;
+     private Integer minimoRepeticoes;
+     private Integer maximoRepeticoes;
+     private Integer descansoEmSegundos;
+   }
+   ```
+
+3. **Serie:**
+
+   ```java
+   public class Serie {
+   
+     private Long serieId;
+     private LocalDate data;
+     private Double carga;
+     private Integer repeticoes;
+   }
+   ```
+
+4. **Exercicio:**
+
+   ```java
+   public class Exercicio {
+   
+     private Long id;
+     private String nome;
+     private GrupoMuscular grupoMuscular;
+     private Equipamento equipamento;
+   }
+   ```
+
+#### Modelagem do banco de dados:![Modelo Banco de dados](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t2-si-2025-t2-gp3/raw/main/docs/img/GymFlow%20-%20DB.png)
 
 ## Tecnologias Utilizadas
 
