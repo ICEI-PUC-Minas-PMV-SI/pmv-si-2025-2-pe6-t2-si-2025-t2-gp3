@@ -17,7 +17,6 @@ A API será desenvolvida para centralizar e gerenciar a comunicação entre os c
 * Preservar a integridade das informações.
 * Facilitar a escalabilidade do sistema.
 
-
 ## Modelagem da Aplicação
 [Descreva a modelagem da aplicação, incluindo a estrutura de dados, diagramas de classes ou entidades, e outras representações visuais relevantes.]
 
