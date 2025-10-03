@@ -8,9 +8,14 @@ Aqui estão algumas etapas importantes que devem ser consideradas no planejament
 
 ## Objetivos da API
 
-O primeiro passo é definir os objetivos da sua API. O que você espera alcançar com ela? Você quer que ela seja usada por clientes externos ou apenas por aplicações internas? Quais são os recursos que a API deve fornecer?
+A API será desenvolvida para centralizar e gerenciar a comunicação entre os componentes do nosso sistema distribuído. Os principais objetivos dela são: 
 
-[Inclua os objetivos da sua api.]
+* Fornecer, sem expor para clientes externos, os serviços para o aplicativo mobile e frontend.
+* Disponibilizar recursos para gerenciar os treinos, registros de series, repetições, cargas e acompanhar o historico de treinos.
+* Disponibilizar relatórios e estatísticas de desempenho no frontend.
+* Assegurar que a integração entre os componentes do sistema seja eficiente e segura.
+* Preservar a integridade das informações.
+* Facilitar a escalabilidade do sistema.
 
 
 ## Modelagem da Aplicação
