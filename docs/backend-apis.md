@@ -14,9 +14,79 @@ O primeiro passo é definir os objetivos da sua API. O que você espera alcança
 
 
 ## Modelagem da Aplicação
-[Descreva a modelagem da aplicação, incluindo a estrutura de dados, diagramas de classes ou entidades, e outras representações visuais relevantes.]
 
+A modelagem da aplicação contempla as seguintes entidades principais: 
 
+1. **Usuário:** 
+
+   ```java
+   public class Usuarios {
+   
+     private Long id;
+     private String nome;
+     private Integer CPF;
+     private String email;
+     private String senha;
+     private LocalDate dataNascimento;
+   }
+   ```
+
+2. **Treino:**
+
+   ```java
+   public class Treino {
+   
+     private Long id;
+     private String nome;
+     private LocalDate dataInicio;
+     private LocalDate dataFim;
+     private Set<Ficha> fichas;
+   }
+   
+   public class Ficha {
+   
+     private Long id;
+     private DiaSemana diaSemana;
+     private Set<ExercicioFicha> exercicios;
+   }
+   
+   public class ExercicioFicha {
+   
+     private Long exercicioFichaId;
+     private Long exercicioId;
+     private Long fichaId;
+     private Double carga;
+     private String observacao;
+     private Integer quantidadeDeSeries;
+     private Integer minimoRepeticoes;
+     private Integer maximoRepeticoes;
+     private Integer descansoEmSegundos;
+   }
+   ```
+
+3. **Serie:**
+
+   ```java
+   public class Serie {
+   
+     private Long serieId;
+     private LocalDate data;
+     private Double carga;
+     private Integer repeticoes;
+   }
+   ```
+
+4. **Exercicio:**
+
+   ```java
+   public class Exercicio {
+   
+     private Long id;
+     private String nome;
+     private GrupoMuscular grupoMuscular;
+     private Equipamento equipamento;
+   }
+   ```
 ## Tecnologias Utilizadas
 
 Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs Web. A tecnologia certa para o seu projeto dependerá dos seus objetivos, dos seus clientes e dos recursos que a API deve fornecer.
