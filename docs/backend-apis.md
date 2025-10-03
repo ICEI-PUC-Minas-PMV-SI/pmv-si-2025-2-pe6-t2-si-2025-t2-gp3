@@ -17,7 +17,6 @@ A API será desenvolvida para centralizar e gerenciar a comunicação entre os c
 * Preservar a integridade das informações.
 * Facilitar a escalabilidade do sistema.
 
-
 ## Modelagem da Aplicação
 A modelagem da aplicação contempla as seguintes entidades principais: 
 
