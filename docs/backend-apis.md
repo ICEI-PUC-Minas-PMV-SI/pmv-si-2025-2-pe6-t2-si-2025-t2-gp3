@@ -1,10 +1,7 @@
 # APIs e Web Services
 
-O planejamento de uma aplicação de APIS Web é uma etapa fundamental para o sucesso do projeto. Ao planejar adequadamente, você pode evitar muitos problemas e garantir que a sua API seja segura, escalável e eficiente.
+O sistema em desenvolvimento tem como onbjetivo registrar e acompanhar treinos de musculação. Faremos isso atraves de um sistema distribido com tres camadas: uma aplicação mobile para registro das series, repetições, cargas, e controle de tempo de cada usuário; uma aplicação frontend web com funcionalidades mais avançadas, como estatisticas e visualização de desempenho; e um backend responsável pelo processamento dos dados e integração com o banco de dados.
 
-Aqui estão algumas etapas importantes que devem ser consideradas no planejamento de uma aplicação de APIS Web.
-
-[Inclua uma breve descrição do projeto.]
 
 ## Objetivos da API
 
@@ -457,13 +454,48 @@ Por se tratar de uma aplicação que envolve armazenamento e troca de dados sens
 
 ## Implantação
 
-[Instruções para implantar a aplicação distribuída em um ambiente de produção.]
+Nossa implantação envolve a preparação de três ambientes para nossos principais componentes: backend, frontend e mobile
 
-1. Defina os requisitos de hardware e software necessários para implantar a aplicação em um ambiente de produção.
-2. Escolha uma plataforma de hospedagem adequada, como um provedor de nuvem ou um servidor dedicado.
-3. Configure o ambiente de implantação, incluindo a instalação de dependências e configuração de variáveis de ambiente.
-4. Faça o deploy da aplicação no ambiente escolhido, seguindo as instruções específicas da plataforma de hospedagem.
-5. Realize testes para garantir que a aplicação esteja funcionando corretamente no ambiente de produção.
+1. **Requisitos de Hardware e Software**
+   - Servidor backend / API:
+     - Processador compativel com múltiplas requisições
+     - Memória suficiente para executar uma aplicação Spring
+     - Suporte para linguagem Java
+     - Suporte para conteinerização com Docker
+
+   - Banco de dados:
+     - Ser compatível com PostgreSQL
+
+   - Frontend
+     - Ambiente com suporte a HTML, CSS e JS
+
+   - Mobile
+     - Sem necessidade de infraestrutura para deploy
+
+2. **Plataforma de Hospedagem**
+   - Backend / API: Railway 
+   - Banco de dados: Railway 
+   - Frontend: Vercel
+   - Mobile:  Geração do apk e disponibilização para download atraves de um link
+
+3. **Configuração do Ambiente**
+   - Backend / API:  instalação de dependencias, configuração de variaveis de ambiente.
+   - Banco de dados: gerar url de conexão, executar script inicial do banco.
+   - Frontend: configuração de urls de conexão e do servidor.
+   - Mobile: Não será necessário
+
+4. **Deploy**
+   - Backend / API / Banco de dados: subir serviços e conectar ao banco de dados.
+   - Frontend:  realizar o build e subir arquivos estáticos para o servidor de hospedagem.
+   - Mobile: gerar APK  e disponibilizar link para download.
+
+5. **Testes em ambiente não produtivo**
+   - Verificar autenticação e acesso aos endpoints.
+   - Testar integração entre frontend, mobile e backend.
+   - Avaliar o desempenho sob múltiplas requisições.
+   - Garantir que os dados estão sendo inseridos e consultados no banco corretamente.
+   - Monitorar logs e possíveis erros.
+
 
 ## Testes
 
