@@ -499,14 +499,35 @@ Nossa implantação envolve a preparação de três ambientes para nossos princi
 
 ## Testes
 
-[Descreva a estratégia de teste, incluindo os tipos de teste a serem realizados (unitários, integração, carga, etc.) e as ferramentas a serem utilizadas.]
+Para  assegurar a qualidade e a confiabilidade da aplicação desenvolvida vamos traçar uma estrategia de testes para garantir que a aplicação atenta aos requisistos funcionais e não funcionais definidos. Serão aplicados diferentes tipos de testes em diferentes etapas do desenvolvimento do projeto. Em algumas etapas vamos usar ferramentas de automação como apoio.
 
-1. Crie casos de teste para cobrir todos os requisitos funcionais e não funcionais da aplicação.
-2. Implemente testes unitários para testar unidades individuais de código, como funções e classes.
-3. Realize testes de integração para verificar a interação correta entre os componentes da aplicação.
-4. Execute testes de carga para avaliar o desempenho da aplicação sob carga significativa.
-5. Utilize ferramentas de teste adequadas, como frameworks de teste e ferramentas de automação de teste, para agilizar o processo de teste.
+1. Testes Unitários
+    - Objetivo: validar unidades isoladas do código desenvolvido, como funçoes e classes, assegurando que produzam a saída correta para diferentes entradas.
+    - Exemplo: funções de calculo de carga total de treino, metodos que calculam estatisticas, metodos de cadastro, etc.
 
+2. Testes de integração
+    - Objetivo: verificar se diferentes módulos da aplicação interagem corretamente.
+    - Exemplo: verificar se os serviços estão se comunicando corretamente com o banco de dados
+
+3. Testes de Carga
+    - Objetivo: validar se a aplicação se comporta com alto volume de acessos simultaneos e garante armazenamento dos dados.
+    - Exemplo: 100 usuarios registrando treinos ao mesmo tempo na aplicação
+
+4. Testes Funcionais
+    - Objetivo: Validar se os requisitos levantados estão sendo atendidos simulando cenários reais de uso.
+    - Exemplo: Registrar treino ou atualizar carga do exercicio na ficha.
+
+
+### Onde serão aplicados os testes:
+
+| Tipo de Teste        | Backend | Mobile | Frontend |
+| -------------------- | :-----: | :----: | :------: |
+| Testes Unitários     |   SIM   |  SIM   |   NÃO    |
+| Testes de Integração |   SIM   |  NÃO   |   NÃO    |
+| Testes de Carga      |   SIM   |  SIM   |   SIM    |
+| Testes Funcionais    |   NÃO   |  SIM   |   SIM    |
+
+---
 # Referências
 
 Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
