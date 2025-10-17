@@ -527,6 +527,19 @@ Para  assegurar a qualidade e a confiabilidade da aplicação desenvolvida vamos
 | Testes de Carga      |   SIM   |  SIM   |   SIM    |
 | Testes Funcionais    |   NÃO   |  SIM   |   SIM    |
 
+### Casos de Testes
+
+| Caso de Teste | Endpoint             | Dados de Entrada                            | Resultado Esperado                                       | Resultado Obtido  | Status     |
+| ------------- | -------------------- | ------------------------------------------- | -------------------------------------------------------- | ----------------- | ---------- |
+| CT-001        | `POST /api/exercicios` | `{"nome": "Agachamento Smith","grupoMuscular": "QUADRICEPS","equipamento": "SMITH_MACHINE"}` | Retornar `200 Created` com dados do Exercicio  | `200 Created`     | ✅ Aprovado |
+| CT-002        | `POST /api/exercicios` | `{"nome": "Leg Press 45","grupoMuscular": "QUADRICEPS","equipamento": "LEG PRESS"}` | Retornar `400	Requisição inválida`   | `400	Requisição inválida`     | ✅ Aprovado |
+| CT-003        | `POST /api/exercicios` | `{"nome": "Agachamento Smith","grupoMuscular": "QUADRICEPES","equipamento": "SMITH_MACHINE"}` | Retornar `400	Requisição inválida`   | `400	Requisição inválida`     | ✅ Aprovado |
+| CT-004        | `GET /api/exercicios`  | Buscar a lista de exercícios cadastrados na API  | Retornar `200 Created` | `200 Created` | ✅ Aprovado |
+| CT-003        | `POST /api/usuarios`   | CPF inválido                                | Retornar `400 Bad Request`                               | `400 Bad Request` | ✅ Aprovado |
+| CT-004        | `POST /api/usuarios`   | `{ "nome": "Maria", "cpf": "12345678900" }` | Retornar `201 Created` com dados do paciente             | `201 Created`     | ✅ Aprovado |
+| CT-005        | `POST /api/usuarios`   | CPF já existente                            | Retornar `409 Conflict` com mensagem “CPF já cadastrado” | `409 Conflict`    | ✅ Aprovado |
+| CT-006        | `POST /api/usuarios`   | CPF inválido                                | Retornar `400 Bad Request`                               | `400 Bad Request` | ✅ Aprovado |
+
 ---
 # Referências
 
