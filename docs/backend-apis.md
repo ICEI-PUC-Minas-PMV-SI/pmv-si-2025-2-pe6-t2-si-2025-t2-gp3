@@ -540,6 +540,13 @@ Para  assegurar a qualidade e a confiabilidade da aplicação desenvolvida vamos
 | CT-005        | `POST /api/usuarios`   | CPF já existente                            | Retornar `409 Conflict` com mensagem “CPF já cadastrado” | `409 Conflict`    | ✅ Aprovado |
 | CT-006        | `POST /api/usuarios`   | CPF inválido                                | Retornar `400 Bad Request`                               | `400 Bad Request` | ✅ Aprovado |
 
+
+
+| ------------- | -------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------| ----------------- | ----------- |
+| CT-015        | `POST /api/series`   | `"exercicioFichaId": 1, "data": "2025-15-10", "carga": 45.0, "repeticoes": 12`| Retornar Sucesso (201 CREATED)                | `201 Sucesso`     | ✅ Aprovado |
+| CT-016        | `POST /api/series`   | `"exercicioFichaId": 2, "data": "quinze de outubro de 2025", "carga": 45kg, "repeticoes": 10`| Retornar  Erro (400) - Requisição inválida| `400 Requisição inválida`|     ✅ Aprovado |
+| CT-017        | `POST /api/series`   | `"exercicioFichaId": 15, "data": "2025-15-10", "carga": 180, "repeticoes": 6`|  Retornar Sucesso (201 CREATED)               | `201 Sucesso`      | ✅ Aprovado |
+
 ---
 # Referências
 
