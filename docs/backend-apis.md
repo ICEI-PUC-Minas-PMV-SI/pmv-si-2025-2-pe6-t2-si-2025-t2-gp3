@@ -547,6 +547,16 @@ Para  assegurar a qualidade e a confiabilidade da aplicação desenvolvida vamos
 | CT-014        | `POST /api/fichas/exercicio`   | `{ "fichaId": 1,"exercicioId": 1,"carga": 5,"observacao": "aquecimento leve","quantidadeDeSeries": tres,"minimoRepeticoes": 10,"maximoRepeticoes": 12,"descansoEmSegundos": 60 }`  | Retornar `400 Requisição inválida`                | `400 Requisição inválida`     | ✅ Aprovado |
 | CT-015        | `POST /api/fichas/exercicio`   | `{ "fichaId": 15,"exercicioId": 1,"carga": 5,"observacao": "aquecimento leve","quantidadeDeSeries": tres,"minimoRepeticoes": 10,"maximoRepeticoes": 12,"descansoEmSegundos": 60 }`  | Retornar `404 Recurso não encontrado` com mensagem "Ficha não encontrada”                | `404 Recurso não encontrado`     | ✅ Aprovado |
 | CT-016        | `GET /api/fichas/exercicio`    | Buscar os exercicios de uma fichas cadastradas                | Retornar `201 Sucesso`                                   | `201 Sucesso`     | ✅ Aprovado |
+| CT-017 | `POST /api/treinos` | `{"nome": "Treino A","dataInicio": "2025-10-20","dataFim": "2025-11-20"}` | Retornar `201 Created` com dados do treino cadastrado | `201 Created` | ✅ Aprovado |
+| CT-018 | `POST /api/treinos` | `{"nome": "", "dataInicio": "2025-10-20","dataFim": "2025-11-20"}` | Retornar `400	Requisição inválida` (campo “nome” vazio) | `400	Requisição inválida` | ✅ Aprovado |
+| CT-019 | `POST /api/treinos` | `{"nome": "Treino B","dataInicio": "2025-11-20","dataFim": "2025-10-20"}` | Retornar `400	Requisição inválida` (data de início maior que a final) | `400	Requisição inválida` | ✅ Aprovado |
+| CT-020 | `POST /api/treinos` | `{"nome": "Treino C","dataInicio": "2025-10-20"}` | Retornar `400	Requisição inválida` (campo “dataFim” ausente) | `400	Requisição inválida` | ✅ Aprovado |
+| CT-021 | `GET/api/treinos` | Buscar a lista de treinos cadastrados na API | Retornar `200 Success` com lista de treinos cadastrados | `200 Success` | ✅ Aprovado |
+| CT-022 | `GET /api/treinos` | Buscar a página sem registros | Retornar `204	Sem treinos cadastrados` | `204	Sem treinos cadastrados` | ✅ Aprovado |
+| CT-023 | `POST /api/treinos` | `{"nome": "Treino D","dataInicio": "2025-10-20","dataFim": "2025-10-20"}` | Retornar `201 Created` com datas iguais válidas | `201 Created` | ✅ Aprovado |
+| CT-024 | `POST /api/treinos` | `{"nome": "Treino E","dataInicio": "2025-10-20","dataFim": "2025-11-20"}` | Retornar `500	Erro interno do servidor` (simulação de falha do backend) | `500	Erro interno do servidor` | ✅ Aprovado |
+
+
 ---
 # Referências
 
