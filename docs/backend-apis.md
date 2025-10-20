@@ -539,7 +539,14 @@ Para  assegurar a qualidade e a confiabilidade da aplicação desenvolvida vamos
 | CT-006        | `POST /api/usuarios`   | `{ "nome": "Maria", "cpf": "12345678900" }` | Retornar `201 Created` com dados do paciente             | `201 Created`     | ✅ Aprovado |
 | CT-007        | `POST /api/usuarios`   | CPF já existente                            | Retornar `409 Conflict` com mensagem “CPF já cadastrado” | `409 Conflict`    | ✅ Aprovado |
 | CT-008        | `POST /api/usuarios`   | CPF inválido                                | Retornar `400 Bad Request`                               | `400 Bad Request` | ✅ Aprovado |
-
+| CT-009        | `POST /api/fichas`   | `{ "treinoId": 1,"diaSemana": "SEGUNDA" }`  | Retornar `201 Sucesso` com dados da ficha                | `201 Sucesso`     | ✅ Aprovado |
+| CT-010        | `POST /api/fichas`   | `{ "treinoId": 5,"diaSemana": "SEGUNDA" }`  | Retornar `404 Recurso não encontrado` com mensagem "Treino não encontrado” | `404 Recurso não encontrado`    | ✅ Aprovado |
+| CT-011        | `POST /api/fichas`   | `{ "treinoId": 1,"diaSemana": "segunda" }`  | Retornar `400 Requisição inválida`                       | `400 Requisição inválida` | ✅ Aprovado |
+| CT-012        | `GET /api/fichas`    | Buscar as fichas cadastradas                | Retornar `201 Sucesso`                                   | `201 Sucesso`     | ✅ Aprovado |
+| CT-013        | `POST /api/fichas/exercicio`   | `{ "fichaId": 1,"exercicioId": 1,"carga": 5,"observacao": "aquecimento leve","quantidadeDeSeries": 3,"minimoRepeticoes": 10,"maximoRepeticoes": 12,"descansoEmSegundos": 60 }`  | Retornar `201 Sucesso` com dados do execicio da ficha                | `201 Sucesso`     | ✅ Aprovado |
+| CT-014        | `POST /api/fichas/exercicio`   | `{ "fichaId": 1,"exercicioId": 1,"carga": 5,"observacao": "aquecimento leve","quantidadeDeSeries": tres,"minimoRepeticoes": 10,"maximoRepeticoes": 12,"descansoEmSegundos": 60 }`  | Retornar `400 Requisição inválida`                | `400 Requisição inválida`     | ✅ Aprovado |
+| CT-015        | `POST /api/fichas/exercicio`   | `{ "fichaId": 15,"exercicioId": 1,"carga": 5,"observacao": "aquecimento leve","quantidadeDeSeries": tres,"minimoRepeticoes": 10,"maximoRepeticoes": 12,"descansoEmSegundos": 60 }`  | Retornar `404 Recurso não encontrado` com mensagem "Ficha não encontrada”                | `404 Recurso não encontrado`     | ✅ Aprovado |
+| CT-016        | `GET /api/fichas/exercicio`    | Buscar os exercicios de uma fichas cadastradas                | Retornar `201 Sucesso`                                   | `201 Sucesso`     | ✅ Aprovado |
 ---
 # Referências
 
