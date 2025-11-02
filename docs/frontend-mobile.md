@@ -9,9 +9,58 @@
 
 [Inclua os wireframes das páginas principais da interface, mostrando a disposição dos elementos na página.]
 
-### Design Visual
+## Design Visual
 
-[Descreva o estilo visual da interface, incluindo paleta de cores, tipografia, ícones e outros elementos gráficos.]
+**Paleta de cores**
+
+* **Primária (#1565C0)** — Azul intenso utilizado nos títulos, links e elementos de destaque. Transmite **confiança, estabilidade e foco**.
+* **Secundária (#121212)** — Cor **escura** usada em fundos e áreas de contraste.
+* **Apoio (#00C853)** — Verde vibrante que destaca **botões de ação** (como “CADASTRE-SE”), indicando **sucesso e positividade**.
+* **Neutros (#616161 e #FFFFFF)** — Tons de **cinza médio e branco puro** para equilibrar o contraste e garantir boa legibilidade.
+* **Feedback (#FF6D00 e #D32F2F)** — Tons de **laranja** e **vermelho** aplicados para **alertas e erros**.
+
+![PALETA DE CORES](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t2-si-2025-t2-gp3/raw/main/docs/img/PALETA%20DE%20CORES.png)
+
+**Tipografia**
+
+* **Títulos:** *Archivo Black* — Fonte, que reforça a **força e a presença** da marca.
+* **Textos e rótulos:** *Montserrat* — Moderna e legível, garantindo **clareza e leveza** no corpo do texto e nos campos de formulário.
+
+![TIPOGRAFIA](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t2-si-2025-t2-gp3/raw/main/docs/img/TIPOGRAFIA.png)
+
+**Ícones e Elementos Gráficos**
+
+O logotipo em azul escuro sobre um círculo vermelho-alaranjado, simbolizando energia, determinação e superação — valores centrais da marca. Os ícones secundários, como o **ícone de exibição de senha**, seguindo a consistência visual do sistema. 
+
+![LOGOTIPO](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t2-si-2025-t2-gp3/raw/main/docs/img/LOGO.png)
+
+**Geral**
+
+O design do GymFlow comunica **energia e modernidade**. A combinação de azul e verde reforça **confiança e progresso**, enquanto a tipografia e os ícones tornam a experiência **acessível e agradável**. O resultado é uma interface ideal para um app voltado à organização e acompanhamento de treinos.
+
+**Cadastro**
+
+![CADASTRO](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t2-si-2025-t2-gp3/raw/main/docs/img/CADASTRO.png)
+
+**Login**
+
+![LOGIN](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t2-si-2025-t2-gp3/raw/main/docs/img/LOGIN.png)
+
+**Cadastro de Fichas**
+
+![CADASTRO DE FICHAS DE TREINO](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t2-si-2025-t2-gp3/raw/main/docs/img/CADASTRO%20DE%20FICHAS.png)
+
+**Estatisticas**
+
+![ESTATISTICAS](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t2-si-2025-t2-gp3/raw/main/docs/img/ESTATISTICAS.png)
+
+**Perfil do Usuário**
+
+![PERFIL DO USUARIO](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t2-si-2025-t2-gp3/raw/main/docs/img/PERFIL%20DO%20USUARIO.png)
+
+**Home Page**
+
+![HOME PAGE](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t2-si-2025-t2-gp3/raw/main/docs/img/HOME%20PAGE.png)
 
 ## Fluxo de Dados
 
