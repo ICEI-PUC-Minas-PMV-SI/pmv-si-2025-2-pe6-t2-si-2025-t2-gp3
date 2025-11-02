@@ -37,14 +37,92 @@
 
 ## Testes
 
-[Descreva a estratégia de teste, incluindo os tipos de teste a serem realizados (unitários, integração, carga, etc.) e as ferramentas a serem utilizadas.]
+### Casos de Teste
 
-1. Crie casos de teste para cobrir todos os requisitos funcionais e não funcionais da aplicação.
-2. Implemente testes unitários para testar unidades individuais de código, como funções e classes.
-3. Realize testes de integração para verificar a interação correta entre os componentes da aplicação.
-4. Execute testes de carga para avaliar o desempenho da aplicação sob carga significativa.
-5. Utilize ferramentas de teste adequadas, como frameworks de teste e ferramentas de automação de teste, para agilizar o processo de teste.
+### 1. Página de Cadastro
 
+### Funcionalidade: Cadastrar novo usuário
+
+
+| Caso de Teste | Descrição | Entrada | Resultado Esperado | Print da Execução | Status |
+|----------------|------------|----------|--------------------|-------------------|--------|
+| CT-01 | Campos obrigatórios vazios | Nome, email e senha em branco | Exibir popup “Preencha todos os campos!” | ![print CT-01](img/fwct01.png) | Sucesso |
+| CT-02 | Email inválido | `usuario@teste` | Exibir popup “Email inválido!” | ![print CT-01](img/fwct02.png) | Sucesso |
+| CT-03 | Senha menor que 4 caracteres | `123` | Exibir popup “A senha deve ter pelo menos 4 caracteres.” | ![print CT-03](img/fwct03.png) | Sucesso |
+| CT-04 | Email já cadastrado | Email existente no banco | Exibir popup “Este email já está cadastrado!” | ![print CT-04](img/fwct03.png) | Sucesso |
+| CT-05 | Cadastro bem-sucedido | Nome, email e senha válidos | Exibir popup “Cadastro realizado com sucesso!” e registrar usuário no backend | ![print CT-05](img/fwct03.png) | Sucesso |
+
+### 2. Página de Login
+
+### Funcionalidade: Autenticar usuário
+
+| Caso de Teste | Descrição | Entrada | Resultado Esperado | Print da Execução | Status |
+|----------------|------------|----------|--------------------|-------------------|--------|
+| CT-06 | Campos obrigatórios vazios | Email e senha em branco | Exibir popup “Preencha todos os campos!” | ![print CT-06](img/fwct03.png) | Sucesso |
+| CT-07 | Email inválido | `usuario@teste` | Exibir popup “Email inválido!” | ![print CT-07](img/fwct03.png) | Sucesso |
+| CT-08 | Credenciais incorretas | Email ou senha inválidos | Exibir popup “Email ou senha inválidos!” | ![print CT-08](img/fwct03.png) | Sucesso |
+| CT-09 | Login bem-sucedido | Email e senha corretos | Salvar token no localStorage e redirecionar para MenuPrincipal | ![print CT-09](img/fwct03.png) | Sucesso |
+
+
+### Funcionalidade: Redefinir senha
+
+| Caso de Teste | Descrição | Entrada | Resultado Esperado | Print da Execução | Status |
+|----------------|------------|----------|--------------------|-------------------|--------|
+| CT-10 | Campos obrigatórios vazios | Nome, email ou senha vazios | Exibir popup “Preencha todos os campos!” | - | API para redefinição de senha ainda não implementada |
+| CT-11 | Email inválido | `email@teste` | Exibir popup “Email inválido!” | - | API para redefinição de senha ainda não implementada |
+| CT-12 | Senha muito curta | `123` | Exibir popup “A senha deve ter pelo menos 4 caracteres.” | - | API para redefinição de senha ainda não implementada |
+| CT-13 | Redefinição bem-sucedida | Nome e email válidos + nova senha | Exibir popup “Senha redefinida com sucesso!” | - | API para redefinição de senha ainda não implementada |
+| CT-14 | Nome/email inexistente | Dados não encontrados | Exibir popup “Email ou nome inválidos!” | - | API para redefinição de senha ainda não implementada |
+
+### 3. Página do Usuário
+
+### Funcionalidade: Editar e salvar dados pessoais
+
+| Caso de Teste | Descrição | Entrada | Resultado Esperado | Print da Execução | Status |
+|----------------|------------|----------|--------------------|-------------------|--------|
+| CT-17 | Editar campos vazios | Nome ou email em branco | Exibir popup “Por favor, insira um nome/email válido.” | - | API para edição de usuarios ainda não implementada |
+| CT-18 | Valores inválidos | Idade, peso ou altura negativos | Exibir popup “Por favor, insira valores válidos.” | - | API para edição de usuarios ainda não implementada |
+| CT-19 | Atualização bem-sucedida | Todos os campos válidos | Exibir popup “Dados salvos com sucesso!” | print | - | API para edição de usuarios ainda não implementada |
+
+
+### Funcionalidade: Metas do Usuário
+
+| Caso de Teste | Descrição | Entrada | Resultado Esperado | Print da Execução | Status |
+|----------------|------------|----------|--------------------|-------------------|--------|
+| CT-20 | Criar meta vazia | Campo de texto vazio | Exibir popup “Digite uma meta válida!” | ![print CT-20](img/fwct20.png) | Sucesso
+| CT-21 | Criar meta válida | Texto preenchido | Adicionar meta à lista | ![print CT-21](img/fwct21.png) | ERRO
+| CT-22 | Concluir meta | Marcar checkbox | Atualizar estado da meta no backend | - | API para edição de usuarios ainda não implementada |
+| CT-23 | Deletar meta | Clicar no ícone de lixeira | Remover meta da lista e do backend | - | API para edição de usuarios ainda não implementada |
+
+
+### Funcionalidade: IMC do Usuário
+
+| Caso de Teste | Descrição | Entrada | Resultado Esperado | Print da Execução | Status |
+|----------------|------------|----------|--------------------|-------------------|--------|
+| CT-24 | Cálculo correto do IMC | Peso 70kg, Altura 170cm | Exibir IMC = 24.22 (Normal) | - | API para edição de usuarios ainda não implementada |
+
+### 4. Menu Principal 
+
+
+### Funcionalidade: Cadastrar novo treino ou removê-lo
+
+
+| Caso de Teste | Descrição | Entrada | Resultado Esperado | Print da Execução | Status |
+|----------------|------------|----------|--------------------|-------------------|--------|
+CT-25| Criar uma ficha e cadastrar um modelo de treino experimental | Campo de texto vazio | O treino ser cadastrado na página para avaliação | ![print CT-25](img/fwct25.png) | Sucesso
+CT-26| Criar um exercício e cadastrar um modelo experimental | Campo de texto vazio | O treino ser cadastrado na página para avaliação | ![print CT-26](img/fwct26.png) | Sucesso
+CT-27| Remover o treino teste que foi colocado na lista |Botão | O treino ser excluído com sucesso | ![print CT-27](img/fwct27.png) | Sucesso
+CT-28| Remover o exercício teste que foi colocado na lista |Botão | O treino ser excluído com sucesso | ![print CT-28](img/fwct28.png) | Sucesso
+
+
+### 5. Estatísiticas
+
+### Funcinalidade: Visualizar as planilhas
+
+| Caso de Teste | Descrição | Entrada | Resultado Esperado | Print da Execução | Status |
+|----------------|------------|----------|--------------------|-------------------|--------|
+CT-29| Entrar com uma conta e visualizar os gráficos que foram criados para o perfil | Nenhuma | O conteúdo ser carregado corretamente | ![print CT-29](img/fwct29.png) | Sucesso
+---
 # Referências
 
 Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
