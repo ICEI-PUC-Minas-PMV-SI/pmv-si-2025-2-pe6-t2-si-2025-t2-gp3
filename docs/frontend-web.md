@@ -54,7 +54,18 @@ O uso de wireframes permitiu validar antecipadamente a experiência do usuário 
 [Diagrama ou descrição do fluxo de dados na aplicação.]
 
 ## Tecnologias Utilizadas
-[Lista das tecnologias principais que serão utilizadas no projeto.]
+
+| Categoria | Tecnologia / Ferramenta |
+|------------|--------------------------|
+| **Linguagem** | JavaScript, HTML |
+| **Estilo e Layout** | CSS |
+| **Hospedagem** | Vercel |
+| **Banco de Dados (via Backend)** | PostgreSQL |
+| **Integração com API** | Consumo de endpoints REST fornecidos pelo backend em Java/Spring Boot |
+| **Controle de Versão** | GitHub (repositório remoto) |
+| **Containerização (infraestrutura geral)** | Docker |
+
+Essas tecnologias garantem compatibilidade, desempenho e fácil integração com os demais módulos (mobile e backend).
 
 ## Considerações de Segurança
 
