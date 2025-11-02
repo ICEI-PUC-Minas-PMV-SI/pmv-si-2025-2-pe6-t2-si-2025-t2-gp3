@@ -8,7 +8,38 @@
 
 ### Wireframes
 
-[Inclua os wireframes das páginas principais da interface, mostrando a disposição dos elementos na página.]
+Os wireframes a seguir representam o esboço visual das principais telas do GymFlow, aplicativo mobile voltado à organização e acompanhamento de treinos. Esta etapa teve como objetivo definir a estrutura visual e funcional do sistema, facilitando a visualização do fluxo de navegação do usuário entre as telas de login, menu inicial, cronômetro e perfil. 
+
+
+O uso de wireframes permitiu validar antecipadamente a experiência do usuário (UX), garantindo que a disposição dos elementos na interface seja intuitiva, acessível e coerente com a proposta do aplicativo. A seguir, são apresentados os wireframes desenvolvidos para o GymFlow, que serviram de base para o desenvolvimento do protótipo funcional:
+ 
+ ##### Tela de Cadastro
+ ![Tela de Cadastro](./img/wiri-cadastro.jpeg)
+
+ ##### Tela de Login
+ ![Tela de Login](./img/wiri-login.jpeg)
+
+ ##### Tela de Perfil
+ ![Tela de Perfil](./img/wiri-perfil.jpeg)
+
+ ##### Tela de Fichas
+ ![Tela de Fichas](./img/wiri-fichas.jpeg)
+
+ ##### Cadastro de Fichas
+ ![Tela de Gráficos](./img/wiri-graficos.jpeg)
+
+ ##### Tela de Estatísticas
+ ![Tela de Estatísticas](./img/wiri-perfil.jpeg)
+
+##### Iconografia
+<p align ="center">
+  <img src="./img/icon1.jpeg" alt="Icon 1" width="150"><br>
+  <img src="./img/icon2.jpeg" alt="Icon 2" width="150"><br>
+  <img src="./img/icon3.jpeg" alt="Icon 3" width="150">
+</p>
+
+
+
 
 ### Design Visual
 
@@ -23,7 +54,9 @@
 
 ## Considerações de Segurança
 
-[Discuta as considerações de segurança relevantes para a aplicação distribuída, como autenticação, autorização, proteção contra ataques, etc.]
+A aplicação web segue as diretrizes gerais de segurança estabelecidas no projeto, garantindo proteção dos dados e autenticação segura.  
+
+Essas medidas asseguram a integridade e confidencialidade das informações do usuário durante a navegação e manipulação dos dados no sistema.
 
 ## Implantação
 
@@ -48,38 +81,4 @@
 # Referências
 
 Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
-
-# Planejamento
-
-##  Quadro de tarefas
-
-> Apresente a divisão de tarefas entre os membros do grupo e o acompanhamento da execução, conforme o exemplo abaixo.
-
-### Semana 1
-
-Atualizado em: 21/04/2024
-
-| Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
-| :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Introdução | 01/02/2024     | 07/02/2024 | ✔️    | 05/02/2024      |
-| AlunaZ        | Objetivos    | 03/02/2024     | 10/02/2024 | 📝    |                 |
-| AlunoY        | Histórias de usuário  | 01/01/2024     | 07/01/2005 | ⌛     |                 |
-| AlunoK        | Personas 1  |    01/01/2024        | 12/02/2005 | ❌    |       |
-
-#### Semana 2
-
-Atualizado em: 21/04/2024
-
-| Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
-| :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Página inicial   | 01/02/2024     | 07/03/2024 | ✔️    | 05/02/2024      |
-| AlunaZ        | CSS unificado    | 03/02/2024     | 10/03/2024 | 📝    |                 |
-| AlunoY        | Página de login  | 01/02/2024     | 07/03/2024 | ⌛     |                 |
-| AlunoK        | Script de login  |  01/01/2024    | 12/03/2024 | ❌    |       |
-
-Legenda:
-- ✔️: terminado
-- 📝: em execução
-- ⌛: atrasado
-- ❌: não iniciado
 
