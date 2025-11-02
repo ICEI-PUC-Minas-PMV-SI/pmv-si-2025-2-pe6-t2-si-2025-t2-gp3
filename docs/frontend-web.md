@@ -1,15 +1,19 @@
 # Front-end Web
 
-[Inclua uma breve descrição do projeto e seus objetivos.]
+O front-end web faz parte da arquitetura distribuída do sistema de acompanhamento de treinos, desenvolvido com o objetivo de oferecer uma experiência completa para os praticantes de musculação.  
+A versão web tem foco principal na visualização de estatísticas, relatórios e gráficos de desempenho, além de permitir o gerenciamento detalhado dos treinos e das informações de perfil do usuário**.  
+Por meio da interface web, o usuário poderá acompanhar sua evolução de forma clara e objetiva, analisar dados históricos e gerenciar as rotinas de treino de maneira organizada e centralizada.
+
+---
 
 ## Projeto da Interface Web
+A interface web será projetada com base em usabilidade, clareza e eficiência, conforme os requisitos não funcionais do sistema.  
+Seu design seguirá uma linha intuitiva, evitando elementos que possam distrair o usuário, garantindo uma navegação fluida e direta aos recursos essenciais.
 
-[Descreva o projeto da interface Web da aplicação, incluindo o design visual, layout das páginas, interações do usuário e outros aspectos relevantes.]
+O foco principal do projeto da interface web é fornecer uma experiência visual agradável, responsiva e centrada na análise de resultados, em contraste com o aplicativo mobile, que prioriza a praticidade do registro durante o treino.
 
-### Wireframes
-
+## Wireframes
 Os wireframes a seguir representam o esboço visual das principais telas do GymFlow, aplicativo mobile voltado à organização e acompanhamento de treinos. Esta etapa teve como objetivo definir a estrutura visual e funcional do sistema, facilitando a visualização do fluxo de navegação do usuário entre as telas de login, menu inicial, cronômetro e perfil. 
-
 
 O uso de wireframes permitiu validar antecipadamente a experiência do usuário (UX), garantindo que a disposição dos elementos na interface seja intuitiva, acessível e coerente com a proposta do aplicativo. A seguir, são apresentados os wireframes desenvolvidos para o GymFlow, que serviram de base para o desenvolvimento do protótipo funcional:
  
