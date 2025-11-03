@@ -19,6 +19,73 @@ Os wireframes a seguir representam o esboço visual das principais telas do GymF
 
 O uso de wireframes permitiu validar antecipadamente a experiência do usuário (UX), garantindo que a disposição dos elementos na interface seja intuitiva, acessível e coerente com a proposta do aplicativo. A seguir, são apresentados os wireframes desenvolvidos para o GymFlow, que serviram de base para o desenvolvimento do protótipo funcional:
 
+## Fluxo de dados
+### 1. Página de Cadastro
+
+| Etapa | Origem | Destino | Tipo de Dado | Descrição |
+|-------|---------|----------|---------------|------------|
+| 1 | Usuário | Front-end | Texto | Inserção de nome, email e senha |
+| 2 | Front-end | Front-end | Texto / Booleano | Validação dos campos (não vazios, formato do email, tamanho da senha) |
+| 3 | Front-end | API `/api/usuarios` | JSON | Envio dos dados do novo usuário `{ nome, email, senha }` |
+| 4 | API | Front-end | JSON | Retorno de confirmação ou mensagem de erro (ex: email já cadastrado) |
+| 5 | Front-end | Usuário | Texto (mensagem) | Exibição do popup com o resultado do cadastro |
+
+
+### 2. Página de Login
+
+| Etapa | Origem | Destino | Tipo de Dado | Descrição |
+|-------|---------|----------|---------------|------------|
+| 1 | Usuário | Front-end | Texto | Inserção de email e senha |
+| 2 | Front-end | Front-end | Texto / Booleano | Verificação de campos e formato de email |
+| 3 | Front-end | API `/api/usuarios/login` | JSON | Envio das credenciais de login |
+| 4 | API | Front-end | JSON | Retorno de token JWT ou mensagem de erro |
+| 5 | Front-end | LocalStorage | String | Armazenamento do token JWT |
+| 6 | Front-end | Página Principal | URL | Caminho de redirecionamento após login |
+| 7 | Usuário | API `/api/---/--` | JSON | Dados para redefinição de senha |
+| 8 | Front-end | Usuário | Texto (mensagem) | Feedback visual de sucesso ou erro |
+
+### 3. Página do Usuário
+
+| Etapa | Origem | Destino | Tipo de Dado | Descrição |
+|-------|---------|----------|---------------|------------|
+| 1 | Front-end | LocalStorage | String | Verificação do token JWT armazenado para autenticação |
+| 2 | Front-end | API `/api/usuarios/---` | JSON | Requisição GET para carregar os dados do usuário autenticado |
+| 3 | API | Front-end | JSON | Retorno com informações do usuário (nome, email, idade, altura, peso) |
+| 4 | Front-end | Interface | Texto / Numérico | Preenchimento dos campos de perfil com os dados recebidos |
+| 5 | Usuário | Front-end | Texto / Número | Edição de dados pessoais e confirmação de salvamento |
+| 6 | Front-end | API `/api/usuarios/---` | JSON | Envio dos dados atualizados do perfil |
+| 7 | API | Front-end | JSON | Resposta de sucesso ou erro da atualização |
+| 8 | Front-end | Interface | Texto (mensagem) | Exibição de popup informando o status do salvamento |
+| 9 | Front-end | API `/---` | JSON | Requisição GET para carregar metas cadastradas |
+| 10 | API | Front-end | JSON | Retorno com lista de metas existentes |
+| 11 | Usuário | Front-end | Texto | Inserção de nova meta no campo de texto |
+| 12 | Front-end | API `/----` | JSON | Envio da nova meta  |
+| 13 | API | Front-end | JSON | Retorno da meta criada (id, texto, status) |
+| 14 | Usuário | Front-end | Booleano | Marcação de meta como concluída (checkbox) |
+| 15 | Front-end | API `/---/--` | JSON | Atualização do status da meta  |
+| 16 | Usuário | Front-end | Evento | Exclusão manual de meta |
+| 17 | Front-end | API `/---/--` | Nenhum (DELETE) | Requisição para excluir a meta selecionada |
+| 18 | API | Front-end | Código HTTP | Retorno de sucesso ou erro na exclusão |
+| 19 | Front-end | Interface | Texto / Numérico | Atualização automática do IMC com base em peso e altura |
+| 20 | Usuário | Front-end | Evento | Clique em “Sair” limpa o estado e redireciona para a página inicial |
+
+### 4. Menu Principal
+
+| Etapa | Origem | Destino | Tipo de Dado | Descrição |
+|-------|---------|----------|---------------|------------|
+| 1 | Front-end | LocalStorage | Texto | Cadastrar uma ficha teste de treino |
+| 2 | Front-end | LocalStorage | Texto | Cadastrar um exercício teste de treino |
+| 3 | Front-end | LocalStorage | Texto | Remover Ficha adicionada |
+| 4 | Front-end | LocalStorage | Texto | Remover Exercício teste adicionado |
+
+### 5. Estatísticas
+
+| Etapa | Origem | Destino | Tipo de Dado | Descrição |
+|-------|---------|----------|---------------|------------|
+| 1 | Front-end | LocalStorage | String | Verificação do token JWT armazenado para autenticação |
+| 2 |API | Interface | Json| Gráficos| Tabelas criadas para visualização |
+
+---
 ##### Tela de Cadastro
 
 ![Tela de Cadastro](./img/wiri-cadastro.jpeg)
