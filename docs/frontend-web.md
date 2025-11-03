@@ -197,15 +197,18 @@ A aplicação web segue as diretrizes gerais de segurança estabelecidas no proj
 
 Essas medidas asseguram a integridade e confidencialidade das informações do usuário durante a navegação e manipulação dos dados no sistema.
 
+
 ## Implantação
+A aplicação web será implantada na plataforma Vercel, conforme especificado na arquitetura do projeto.  
+O processo de implantação será realizado com base na integração contínua do repositório GitHub, permitindo deploy automatizado após atualizações no código.  
 
-[Instruções para implantar a aplicação distribuída em um ambiente de produção.]
+### Passos gerais de implantação:
+1. Configuração do repositório remoto no GitHub.  
+2. Conexão do repositório à conta Vercel.  
+3. Build automático do front-end via pipeline da Vercel.  
+4. Testes de funcionamento e integração com a API hospedada em Render ou Railway.  
+5. Liberação para ambiente de produção.  
 
-1. Defina os requisitos de hardware e software necessários para implantar a aplicação em um ambiente de produção.
-2. Escolha uma plataforma de hospedagem adequada, como um provedor de nuvem ou um servidor dedicado.
-3. Configure o ambiente de implantação, incluindo a instalação de dependências e configuração de variáveis de ambiente.
-4. Faça o deploy da aplicação no ambiente escolhido, seguindo as instruções específicas da plataforma de hospedagem.
-5. Realize testes para garantir que a aplicação esteja funcionando corretamente no ambiente de produção.
 
 ## Testes
 
