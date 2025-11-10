@@ -19,6 +19,41 @@ Os wireframes a seguir representam o esboço visual das principais telas do GymF
 
 O uso de wireframes permitiu validar antecipadamente a experiência do usuário (UX), garantindo que a disposição dos elementos na interface seja intuitiva, acessível e coerente com a proposta do aplicativo. A seguir, são apresentados os wireframes desenvolvidos para o GymFlow, que serviram de base para o desenvolvimento do protótipo funcional:
 
+##### Tela de Cadastro
+
+![Tela de Cadastro](./img/wiri-cadastro.jpeg)
+
+##### Tela de Login
+
+![Tela de Login](./img/wiri-login.jpeg)
+
+##### Tela de Perfil
+
+![Tela de Perfil](./img/wiri-perfil.jpeg)
+
+##### Tela de Fichas
+
+![Tela de Fichas](./img/wiri-fichas.jpeg)
+
+##### Cadastro de Fichas
+
+![Tela de Gráficos](./img/wiri-graficos.jpeg)
+
+##### Tela de Estatísticas
+
+![Tela de Estatísticas](./img/wiri-perfil.jpeg)
+
+##### Iconografia
+
+<p align ="center">
+  <img src="./img/icon1.jpeg" alt="Icon 1" width="150"><br>
+  <img src="./img/icon2.jpeg" alt="Icon 2" width="150"><br>
+  <img src="./img/icon3.jpeg" alt="Icon 3" width="150">
+</p>
+
+
+### 
+
 ## Fluxo de dados
 ### 1. Página de Cadastro
 
@@ -86,40 +121,6 @@ O uso de wireframes permitiu validar antecipadamente a experiência do usuário 
 | 2 |API | Interface | Json| Gráficos| Tabelas criadas para visualização |
 
 ---
-##### Tela de Cadastro
-
-![Tela de Cadastro](./img/wiri-cadastro.jpeg)
-
-##### Tela de Login
-
-![Tela de Login](./img/wiri-login.jpeg)
-
-##### Tela de Perfil
-
-![Tela de Perfil](./img/wiri-perfil.jpeg)
-
-##### Tela de Fichas
-
-![Tela de Fichas](./img/wiri-fichas.jpeg)
-
-##### Cadastro de Fichas
-
-![Tela de Gráficos](./img/wiri-graficos.jpeg)
-
-##### Tela de Estatísticas
-
-![Tela de Estatísticas](./img/wiri-perfil.jpeg)
-
-##### Iconografia
-
-<p align ="center">
-  <img src="./img/icon1.jpeg" alt="Icon 1" width="150"><br>
-  <img src="./img/icon2.jpeg" alt="Icon 2" width="150"><br>
-  <img src="./img/icon3.jpeg" alt="Icon 3" width="150">
-</p>
-
-### Design Visual
-
 ## Design Visual
 
 **Paleta de cores**
@@ -143,7 +144,7 @@ O uso de wireframes permitiu validar antecipadamente a experiência do usuário 
 
 O logotipo em azul escuro sobre um círculo vermelho-alaranjado, simbolizando energia, determinação e superação — valores centrais da marca. Os ícones secundários, como o **ícone de exibição de senha**, seguindo a consistência visual do sistema.
 
-![LOGOTIPO](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t2-si-2025-t2-gp3/raw/main/docs/img/LOGO.png)
+![pmv-si-2025-2-pe6-t2-si-2025-t2-gp3/docs/img/LOGO.PNG at main · ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t2-si-2025-t2-gp3](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t2-si-2025-t2-gp3/raw/main/docs/img/LOGO.PNG)
 
 **Geral**
 
@@ -173,10 +174,6 @@ O design do GymFlow comunica **energia e modernidade**. A combinação de azul e
 
 ![HOME PAGE](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t2-si-2025-t2-gp3/raw/main/docs/img/HOME%20PAGE.png)
 
-## Fluxo de Dados
-
-[Diagrama ou descrição do fluxo de dados na aplicação.]
-
 ## Tecnologias Utilizadas
 
 | Categoria                                  | Tecnologia / Ferramenta                                               |
@@ -193,14 +190,11 @@ Essas tecnologias garantem compatibilidade, desempenho e fácil integração com
 
 ## Considerações de Segurança
 
-A aplicação web segue as diretrizes gerais de segurança estabelecidas no projeto, garantindo proteção dos dados e autenticação segura.
-
-Essas medidas asseguram a integridade e confidencialidade das informações do usuário durante a navegação e manipulação dos dados no sistema.
+A aplicação web segue as diretrizes gerais de segurança estabelecidas no projeto, garantindo proteção dos dados e autenticação segura. Essas medidas asseguram a integridade e confidencialidade das informações do usuário durante a navegação e manipulação dos dados no sistema.
 
 
 ## Implantação
-A aplicação web será implantada na plataforma Vercel, conforme especificado na arquitetura do projeto.  
-O processo de implantação será realizado com base na integração contínua do repositório GitHub, permitindo deploy automatizado após atualizações no código.  
+A aplicação web será implantada na plataforma Vercel, conforme especificado na arquitetura do projeto. O processo de implantação será realizado com base na integração contínua do repositório GitHub, permitindo deploy automatizado após atualizações no código.  
 
 ### Passos gerais de implantação:
 1. Configuração do repositório remoto no GitHub.  
@@ -251,7 +245,7 @@ O processo de implantação será realizado com base na integração contínua d
 
 ### Funcionalidade: Editar e salvar dados pessoais
 
-| Caso de Teste | Descrição                | Entrada                         | Resultado Esperado                                     | Print da Execução | Status                                             |
+| Caso de Teste | Descrição                | Entrada                         | Resultado Esperado                                     | Print da Execução | Status                                            |
 | ------------- | ------------------------ | ------------------------------- | ------------------------------------------------------ | ----------------- | -------------------------------------------------- | -------------------------------------------------- |
 | CT-17         | Editar campos vazios     | Nome ou email em branco         | Exibir popup “Por favor, insira um nome/email válido.” | -                 | API para edição de usuarios ainda não implementada |
 | CT-18         | Valores inválidos        | Idade, peso ou altura negativos | Exibir popup “Por favor, insira valores válidos.”      | -                 | API para edição de usuarios ainda não implementada |
@@ -272,6 +266,3 @@ O processo de implantação será realizado com base na integração contínua d
 | ------------- | ---------------------- | ----------------------- | --------------------------- | ----------------- | -------------------------------------------------- |
 | CT-24         | Cálculo correto do IMC | Peso 70kg, Altura 170cm | Exibir IMC = 24.22 (Normal) | -                 | API para edição de usuarios ainda não implementada |
 
-# Referências
-
-Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
