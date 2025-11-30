@@ -3,6 +3,7 @@
 O front-end móvel deste projeto consiste no desenvolvimento de uma aplicação Android construída utilizando Kotlin e o framework Jetpack Compose. O objetivo principal é fornecer uma interface moderna, eficiente e responsiva para que os usuários possam acessar as funcionalidades do sistema de forma intuitiva. A aplicação busca entregar uma experiência fluida, com navegação simplificada, organização clara das telas e integração direta com a API responsável pelos dados.
 
 ---
+
 ## Projeto da Interface
 
 A interface foi projetada seguindo os princípios do Material Design, adaptados ao Jetpack Compose. As telas utilizam componentes declarativos, permitindo uma construção modular, reutilizável e reativa aos estados da aplicação.
@@ -20,116 +21,142 @@ A interface foi projetada seguindo os princípios do Material Design, adaptados 
 - Cada tela foi pensada para minimizar a carga cognitiva do usuário, exibindo apenas o que é necessário em cada contexto.
 
 ---
+
 ### Wireframes
 
 [Inclua os wireframes das páginas principais da interface, mostrando a disposição dos elementos na página.]
 
 ### Design Visual
 
-[Descreva o estilo visual da interface, incluindo paleta de cores, tipografia, ícones e outros elementos gráficos.]
+**Paleta de cores**
+
+- **Primária (#1565C0)** — Azul intenso utilizado nos títulos, links e elementos de destaque. Transmite **confiança, estabilidade e foco**.
+- **Secundária (#121212)** — Cor **escura** usada em fundos e áreas de contraste.
+- **Apoio (#00C853)** — Verde vibrante que destaca **botões de ação** (como “CADASTRE-SE”), indicando **sucesso e positividade**.
+- **Neutros (#616161 e #FFFFFF)** — Tons de **cinza médio e branco puro** para equilibrar o contraste e garantir boa legibilidade.
+- **Feedback (#FF6D00 e #D32F2F)** — Tons de **laranja** e **vermelho** aplicados para **alertas e erros**.
+
+![PALETA DE CORES](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t2-si-2025-t2-gp3/raw/main/docs/img/PALETA%20DE%20CORES.png)
+
+**Tipografia**
+
+- **Títulos:** _Archivo Black_ — Fonte, que reforça a **força e a presença** da marca.
+- **Textos e rótulos:** _Montserrat_ — Moderna e legível, garantindo **clareza e leveza** no corpo do texto e nos campos de formulário.
+
+![TIPOGRAFIA](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t2-si-2025-t2-gp3/raw/main/docs/img/TIPOGRAFIA.png)
+
+**Ícones e Elementos Gráficos**
+
+O logotipo em azul escuro sobre um círculo vermelho-alaranjado, simbolizando energia, determinação e superação — valores centrais da marca. Os ícones secundários, como o **ícone de exibição de senha**, seguindo a consistência visual do sistema.
+
+![pmv-si-2025-2-pe6-t2-si-2025-t2-gp3/docs/img/LOGO.PNG at main · ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t2-si-2025-t2-gp3](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t2-si-2025-t2-gp3/raw/main/docs/img/LOGO.PNG)
+
+**Geral**
+
+O design do GymFlow comunica **energia e modernidade**. A combinação de azul e verde reforça **confiança e progresso**, enquanto a tipografia e os ícones tornam a experiência **acessível e agradável**. O resultado é uma interface ideal para um app voltado à organização e acompanhamento de treinos.
 
 ## Fluxo de Dados
 
 ### 1. Login (Mobile)
 
-| Etapa | Origem | Destino | Tipo de Dado | Descrição |
-|-------|---------|----------|---------------|------------|
-| 1 | Usuário | App (Mobile) | Texto | Inserção de email e senha |
-| 2 | App (Mobile) | App (Mobile) | Texto / Booleano | Validação dos campos (formato do email e senha não vazia) |
-| 3 | App (Mobile) | API `/auth/login` | JSON | Envio das credenciais `{ email, senha }` |
-| 4 | API | App (Mobile) | JSON | Retorno do token JWT ou mensagem de erro |
-| 5 | App (Mobile) | Armazenamento interno | String | Salvamento do token JWT |
-| 6 | App (Mobile) | Menu Inicial | Navegação | Redirecionamento após autenticação |
+| Etapa | Origem       | Destino               | Tipo de Dado     | Descrição                                                 |
+| ----- | ------------ | --------------------- | ---------------- | --------------------------------------------------------- |
+| 1     | Usuário      | App (Mobile)          | Texto            | Inserção de email e senha                                 |
+| 2     | App (Mobile) | App (Mobile)          | Texto / Booleano | Validação dos campos (formato do email e senha não vazia) |
+| 3     | App (Mobile) | API `/auth/login`     | JSON             | Envio das credenciais `{ email, senha }`                  |
+| 4     | API          | App (Mobile)          | JSON             | Retorno do token JWT ou mensagem de erro                  |
+| 5     | App (Mobile) | Armazenamento interno | String           | Salvamento do token JWT                                   |
+| 6     | App (Mobile) | Menu Inicial          | Navegação        | Redirecionamento após autenticação                        |
 
 ---
 
 ### 2. Cadastro de Usuário (Mobile)
 
-| Etapa | Origem | Destino | Tipo de Dado | Descrição |
-|-------|---------|----------|---------------|------------|
-| 1 | Usuário | App (Mobile) | Texto | Inserção de nome, email e senha |
-| 2 | App (Mobile) | App (Mobile) | Texto / Booleano | Validação dos campos obrigatórios |
-| 3 | App (Mobile) | API `/auth/register` | JSON | Envio dos dados `{ nome, email, senha }` |
-| 4 | API | App (Mobile) | JSON | Retorno de sucesso ou erro |
-| 5 | App (Mobile) | Usuário | Texto | Exibição da mensagem de confirmação |
-| 6 | App (Mobile) | Tela de Login | Navegação | Redirecionamento após cadastro |
+| Etapa | Origem       | Destino              | Tipo de Dado     | Descrição                                |
+| ----- | ------------ | -------------------- | ---------------- | ---------------------------------------- |
+| 1     | Usuário      | App (Mobile)         | Texto            | Inserção de nome, email e senha          |
+| 2     | App (Mobile) | App (Mobile)         | Texto / Booleano | Validação dos campos obrigatórios        |
+| 3     | App (Mobile) | API `/auth/register` | JSON             | Envio dos dados `{ nome, email, senha }` |
+| 4     | API          | App (Mobile)         | JSON             | Retorno de sucesso ou erro               |
+| 5     | App (Mobile) | Usuário              | Texto            | Exibição da mensagem de confirmação      |
+| 6     | App (Mobile) | Tela de Login        | Navegação        | Redirecionamento após cadastro           |
 
 ---
 
 ### 3. Menu Inicial (Mobile)
 
-| Etapa | Origem | Destino | Tipo de Dado | Descrição |
-|-------|---------|----------|---------------|------------|
-| 1 | App (Mobile) | Armazenamento interno | String | Verificação do token JWT |
-| 2 | Usuário | App (Mobile) | Evento | Navegação para Treinos, Perfil ou Criar Treino |
-| 3 | App (Mobile) | Telas Internas | Navegação | Direcionamento conforme escolha do usuário |
+| Etapa | Origem       | Destino               | Tipo de Dado | Descrição                                      |
+| ----- | ------------ | --------------------- | ------------ | ---------------------------------------------- |
+| 1     | App (Mobile) | Armazenamento interno | String       | Verificação do token JWT                       |
+| 2     | Usuário      | App (Mobile)          | Evento       | Navegação para Treinos, Perfil ou Criar Treino |
+| 3     | App (Mobile) | Telas Internas        | Navegação    | Direcionamento conforme escolha do usuário     |
 
 ---
 
 ### 4. Listagem de Treinos (Mobile)
 
-| Etapa | Origem | Destino | Tipo de Dado | Descrição |
-|-------|---------|----------|---------------|------------|
-| 1 | App (Mobile) | Armazenamento interno | String | Leitura do token JWT |
-| 2 | App (Mobile) | API `/treinos/user/{idUser}` | GET | Requisição de todos os treinos do usuário |
-| 3 | API | App (Mobile) | JSON | Retorno da lista de treinos |
-| 4 | App (Mobile) | Interface | Lista / Texto | Renderização dos treinos na tela |
-| 5 | Usuário | App (Mobile) | Evento | Seleciona um treino para visualizar as fichas |
+| Etapa | Origem       | Destino                      | Tipo de Dado  | Descrição                                     |
+| ----- | ------------ | ---------------------------- | ------------- | --------------------------------------------- |
+| 1     | App (Mobile) | Armazenamento interno        | String        | Leitura do token JWT                          |
+| 2     | App (Mobile) | API `/treinos/user/{idUser}` | GET           | Requisição de todos os treinos do usuário     |
+| 3     | API          | App (Mobile)                 | JSON          | Retorno da lista de treinos                   |
+| 4     | App (Mobile) | Interface                    | Lista / Texto | Renderização dos treinos na tela              |
+| 5     | Usuário      | App (Mobile)                 | Evento        | Seleciona um treino para visualizar as fichas |
 
 ---
 
 ### 5. Interior do Treino — Listagem de Fichas
 
-| Etapa | Origem | Destino | Tipo de Dado | Descrição |
-|-------|---------|----------|---------------|------------|
-| 1 | App (Mobile) | API `/fichas?treinoId=...` | GET | Busca todas as fichas do treino |
-| 2 | API | App (Mobile) | JSON | Retorno de `{ id, diaSemana }` |
-| 3 | App (Mobile) | Interface | Lista | Exibição das fichas cadastradas |
-| 4 | Usuário | App (Mobile) | Evento | Seleciona uma ficha para visualizar seus exercícios |
+| Etapa | Origem       | Destino                    | Tipo de Dado | Descrição                                           |
+| ----- | ------------ | -------------------------- | ------------ | --------------------------------------------------- |
+| 1     | App (Mobile) | API `/fichas?treinoId=...` | GET          | Busca todas as fichas do treino                     |
+| 2     | API          | App (Mobile)               | JSON         | Retorno de `{ id, diaSemana }`                      |
+| 3     | App (Mobile) | Interface                  | Lista        | Exibição das fichas cadastradas                     |
+| 4     | Usuário      | App (Mobile)               | Evento       | Seleciona uma ficha para visualizar seus exercícios |
 
 ---
 
 ### 6. Exercícios da Ficha
 
-| Etapa | Origem | Destino | Tipo de Dado | Descrição |
-|-------|---------|----------|---------------|------------|
-| 1 | App (Mobile) | API `/fichas/exercicio?idFicha=...` | GET | Busca os exercícios vinculados à ficha |
-| 2 | API | App (Mobile) | JSON | Retorno com nome, carga, repetições, descanso etc |
-| 3 | App (Mobile) | Interface | Lista | Exibição dos exercícios cadastrados |
-| 4 | Usuário | App (Mobile) | Evento | Adição de um novo exercício |
-| 5 | App (Mobile) | API `/fichas/exercicio` | JSON (POST) | Cadastro do exercício na ficha |
-| 6 | API | App (Mobile) | JSON | Retorno com confirmação e IDs |
-| 7 | App (Mobile) | Interface | Atualização | Lista atualizada automaticamente |
+| Etapa | Origem       | Destino                             | Tipo de Dado | Descrição                                         |
+| ----- | ------------ | ----------------------------------- | ------------ | ------------------------------------------------- |
+| 1     | App (Mobile) | API `/fichas/exercicio?idFicha=...` | GET          | Busca os exercícios vinculados à ficha            |
+| 2     | API          | App (Mobile)                        | JSON         | Retorno com nome, carga, repetições, descanso etc |
+| 3     | App (Mobile) | Interface                           | Lista        | Exibição dos exercícios cadastrados               |
+| 4     | Usuário      | App (Mobile)                        | Evento       | Adição de um novo exercício                       |
+| 5     | App (Mobile) | API `/fichas/exercicio`             | JSON (POST)  | Cadastro do exercício na ficha                    |
+| 6     | API          | App (Mobile)                        | JSON         | Retorno com confirmação e IDs                     |
+| 7     | App (Mobile) | Interface                           | Atualização  | Lista atualizada automaticamente                  |
 
 ---
 
 ### 7. Criação de Treino — CadEx.kt
 
-| Etapa | Origem | Destino | Tipo de Dado | Descrição |
-|-------|---------|----------|---------------|------------|
-| 1 | Usuário | App (Mobile) | Texto / Seleção | Inserção do nome do treino + seleção de exercícios |
-| 2 | App (Mobile) | API `/treinos` | JSON | Criação do treino `{ nome, dataInicio, dataFim }` |
-| 3 | API | App (Mobile) | JSON | Retorno com `idTreino` |
-| 4 | App (Mobile) | API `/fichas` | JSON | Criação da ficha vinculada ao treino |
-| 5 | App (Mobile) | API `/fichas/exercicio` | JSON | Inclusão dos exercícios selecionados |
-| 6 | API | App (Mobile) | JSON | Confirmando criação |
-| 7 | App (Mobile) | Interface | Texto | Exibe mensagem de sucesso |
-| 8 | App (Mobile) | Menu Inicial | Navegação | Retorno após concluir |
+| Etapa | Origem       | Destino                 | Tipo de Dado    | Descrição                                          |
+| ----- | ------------ | ----------------------- | --------------- | -------------------------------------------------- |
+| 1     | Usuário      | App (Mobile)            | Texto / Seleção | Inserção do nome do treino + seleção de exercícios |
+| 2     | App (Mobile) | API `/treinos`          | JSON            | Criação do treino `{ nome, dataInicio, dataFim }`  |
+| 3     | API          | App (Mobile)            | JSON            | Retorno com `idTreino`                             |
+| 4     | App (Mobile) | API `/fichas`           | JSON            | Criação da ficha vinculada ao treino               |
+| 5     | App (Mobile) | API `/fichas/exercicio` | JSON            | Inclusão dos exercícios selecionados               |
+| 6     | API          | App (Mobile)            | JSON            | Confirmando criação                                |
+| 7     | App (Mobile) | Interface               | Texto           | Exibe mensagem de sucesso                          |
+| 8     | App (Mobile) | Menu Inicial            | Navegação       | Retorno após concluir                              |
 
 ---
 
 ### 8. Perfil do Usuário (Mobile)
 
-| Etapa | Origem | Destino | Tipo de Dado | Descrição |
-|-------|---------|----------|---------------|------------|
-| 1 | App (Mobile) | Armazenamento interno | String | Verificação do token |
-| 2 | App (Mobile) | API `/usuarios/{id}` | GET | Busca dos dados do usuário |
-| 3 | API | App (Mobile) | JSON | Retorno com nome, email, idade etc. |
-| 4 | App (Mobile) | Interface | Texto | Preenchimento da tela |
-| 5 | Usuário | App (Mobile) | Texto / Número | Edição dos dados |
-| 6 | App (Mobile) | API `/usuarios/{id}` | JSON | Envio dos dados atualizados |
-| 7 | API | App (Mobile) | JSON | Retorno de sucesso |
-| 8 | App (Mobile) | Interface | Texto | Exibição do resultado |
+| Etapa | Origem       | Destino               | Tipo de Dado   | Descrição                           |
+| ----- | ------------ | --------------------- | -------------- | ----------------------------------- |
+| 1     | App (Mobile) | Armazenamento interno | String         | Verificação do token                |
+| 2     | App (Mobile) | API `/usuarios/{id}`  | GET            | Busca dos dados do usuário          |
+| 3     | API          | App (Mobile)          | JSON           | Retorno com nome, email, idade etc. |
+| 4     | App (Mobile) | Interface             | Texto          | Preenchimento da tela               |
+| 5     | Usuário      | App (Mobile)          | Texto / Número | Edição dos dados                    |
+| 6     | App (Mobile) | API `/usuarios/{id}`  | JSON           | Envio dos dados atualizados         |
+| 7     | API          | App (Mobile)          | JSON           | Retorno de sucesso                  |
+| 8     | App (Mobile) | Interface             | Texto          | Exibição do resultado               |
 
 ---
 
