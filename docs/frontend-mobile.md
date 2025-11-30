@@ -16,7 +16,108 @@
 
 ## Fluxo de Dados
 
-[Diagrama ou descrição do fluxo de dados na aplicação.]
+### 1. Login (Mobile)
+
+| Etapa | Origem | Destino | Tipo de Dado | Descrição |
+|-------|---------|----------|---------------|------------|
+| 1 | Usuário | App (Mobile) | Texto | Inserção de email e senha |
+| 2 | App (Mobile) | App (Mobile) | Texto / Booleano | Validação dos campos (formato do email e senha não vazia) |
+| 3 | App (Mobile) | API `/auth/login` | JSON | Envio das credenciais `{ email, senha }` |
+| 4 | API | App (Mobile) | JSON | Retorno do token JWT ou mensagem de erro |
+| 5 | App (Mobile) | Armazenamento interno | String | Salvamento do token JWT |
+| 6 | App (Mobile) | Menu Inicial | Navegação | Redirecionamento após autenticação |
+
+---
+
+### 2. Cadastro de Usuário (Mobile)
+
+| Etapa | Origem | Destino | Tipo de Dado | Descrição |
+|-------|---------|----------|---------------|------------|
+| 1 | Usuário | App (Mobile) | Texto | Inserção de nome, email e senha |
+| 2 | App (Mobile) | App (Mobile) | Texto / Booleano | Validação dos campos obrigatórios |
+| 3 | App (Mobile) | API `/auth/register` | JSON | Envio dos dados `{ nome, email, senha }` |
+| 4 | API | App (Mobile) | JSON | Retorno de sucesso ou erro |
+| 5 | App (Mobile) | Usuário | Texto | Exibição da mensagem de confirmação |
+| 6 | App (Mobile) | Tela de Login | Navegação | Redirecionamento após cadastro |
+
+---
+
+### 3. Menu Inicial (Mobile)
+
+| Etapa | Origem | Destino | Tipo de Dado | Descrição |
+|-------|---------|----------|---------------|------------|
+| 1 | App (Mobile) | Armazenamento interno | String | Verificação do token JWT |
+| 2 | Usuário | App (Mobile) | Evento | Navegação para Treinos, Perfil ou Criar Treino |
+| 3 | App (Mobile) | Telas Internas | Navegação | Direcionamento conforme escolha do usuário |
+
+---
+
+### 4. Listagem de Treinos (Mobile)
+
+| Etapa | Origem | Destino | Tipo de Dado | Descrição |
+|-------|---------|----------|---------------|------------|
+| 1 | App (Mobile) | Armazenamento interno | String | Leitura do token JWT |
+| 2 | App (Mobile) | API `/treinos/user/{idUser}` | GET | Requisição de todos os treinos do usuário |
+| 3 | API | App (Mobile) | JSON | Retorno da lista de treinos |
+| 4 | App (Mobile) | Interface | Lista / Texto | Renderização dos treinos na tela |
+| 5 | Usuário | App (Mobile) | Evento | Seleciona um treino para visualizar as fichas |
+
+---
+
+### 5. Interior do Treino — Listagem de Fichas
+
+| Etapa | Origem | Destino | Tipo de Dado | Descrição |
+|-------|---------|----------|---------------|------------|
+| 1 | App (Mobile) | API `/fichas?treinoId=...` | GET | Busca todas as fichas do treino |
+| 2 | API | App (Mobile) | JSON | Retorno de `{ id, diaSemana }` |
+| 3 | App (Mobile) | Interface | Lista | Exibição das fichas cadastradas |
+| 4 | Usuário | App (Mobile) | Evento | Seleciona uma ficha para visualizar seus exercícios |
+
+---
+
+### 6. Exercícios da Ficha
+
+| Etapa | Origem | Destino | Tipo de Dado | Descrição |
+|-------|---------|----------|---------------|------------|
+| 1 | App (Mobile) | API `/fichas/exercicio?idFicha=...` | GET | Busca os exercícios vinculados à ficha |
+| 2 | API | App (Mobile) | JSON | Retorno com nome, carga, repetições, descanso etc |
+| 3 | App (Mobile) | Interface | Lista | Exibição dos exercícios cadastrados |
+| 4 | Usuário | App (Mobile) | Evento | Adição de um novo exercício |
+| 5 | App (Mobile) | API `/fichas/exercicio` | JSON (POST) | Cadastro do exercício na ficha |
+| 6 | API | App (Mobile) | JSON | Retorno com confirmação e IDs |
+| 7 | App (Mobile) | Interface | Atualização | Lista atualizada automaticamente |
+
+---
+
+### 7. Criação de Treino — CadEx.kt
+
+| Etapa | Origem | Destino | Tipo de Dado | Descrição |
+|-------|---------|----------|---------------|------------|
+| 1 | Usuário | App (Mobile) | Texto / Seleção | Inserção do nome do treino + seleção de exercícios |
+| 2 | App (Mobile) | API `/treinos` | JSON | Criação do treino `{ nome, dataInicio, dataFim }` |
+| 3 | API | App (Mobile) | JSON | Retorno com `idTreino` |
+| 4 | App (Mobile) | API `/fichas` | JSON | Criação da ficha vinculada ao treino |
+| 5 | App (Mobile) | API `/fichas/exercicio` | JSON | Inclusão dos exercícios selecionados |
+| 6 | API | App (Mobile) | JSON | Confirmando criação |
+| 7 | App (Mobile) | Interface | Texto | Exibe mensagem de sucesso |
+| 8 | App (Mobile) | Menu Inicial | Navegação | Retorno após concluir |
+
+---
+
+### 8. Perfil do Usuário (Mobile)
+
+| Etapa | Origem | Destino | Tipo de Dado | Descrição |
+|-------|---------|----------|---------------|------------|
+| 1 | App (Mobile) | Armazenamento interno | String | Verificação do token |
+| 2 | App (Mobile) | API `/usuarios/{id}` | GET | Busca dos dados do usuário |
+| 3 | API | App (Mobile) | JSON | Retorno com nome, email, idade etc. |
+| 4 | App (Mobile) | Interface | Texto | Preenchimento da tela |
+| 5 | Usuário | App (Mobile) | Texto / Número | Edição dos dados |
+| 6 | App (Mobile) | API `/usuarios/{id}` | JSON | Envio dos dados atualizados |
+| 7 | API | App (Mobile) | JSON | Retorno de sucesso |
+| 8 | App (Mobile) | Interface | Texto | Exibição do resultado |
+
+---
 
 ## Tecnologias Utilizadas
 
@@ -28,7 +129,9 @@
 
 ## Implantação
 
-[Instruções para implantar a aplicação distribuída em um ambiente de produção.]
+A implantação do aplicativo móvel e do backend foi estruturada para garantir estabilidade, escalabilidade e facilidade de manutenção. O backend, desenvolvido em Java/Spring Boot, é hospedado na plataforma Heroku, que realiza o deploy manual a partir do repositório Git, garantindo controle total sobre cada atualização. A aplicação mobile, construída em Kotlin com Jetpack Compose, é distribuída em formato APK para testes e validação funcional. O banco de dados PostgreSQL, também hospedado no Heroku, é integrado aos serviços do backend, permitindo persistência segura e consistente dos dados. Esse conjunto assegura um ambiente de implantação simples, funcional e adequado ao propósito acadêmico do projeto.
+
+---
 
 1. Defina os requisitos de hardware e software necessários para implantar a aplicação em um ambiente de produção.
 2. Escolha uma plataforma de hospedagem adequada, como um provedor de nuvem ou um servidor dedicado.
