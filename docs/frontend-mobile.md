@@ -1,11 +1,25 @@
-# Front-end Móvel
+# Aplicação Mobile
 
-[Inclua uma breve descrição do projeto e seus objetivos.]
+O front-end móvel deste projeto consiste no desenvolvimento de uma aplicação Android construída utilizando Kotlin e o framework Jetpack Compose. O objetivo principal é fornecer uma interface moderna, eficiente e responsiva para que os usuários possam acessar as funcionalidades do sistema de forma intuitiva. A aplicação busca entregar uma experiência fluida, com navegação simplificada, organização clara das telas e integração direta com a API responsável pelos dados.
 
+---
 ## Projeto da Interface
 
-[Descreva o projeto da interface móvel da aplicação, incluindo o design visual, layout das páginas, interações do usuário e outros aspectos relevantes.]
+A interface foi projetada seguindo os princípios do Material Design, adaptados ao Jetpack Compose. As telas utilizam componentes declarativos, permitindo uma construção modular, reutilizável e reativa aos estados da aplicação.
 
+- Principais características da interface:
+
+- Layouts compostos utilizando Scaffold, Column, Row e LazyColumn.
+
+- Navegação entre telas construída com Navigation Compose.
+
+- Componentes interativos como botões, cards e campos de entrada personalizados.
+
+- Estrutura de telas organizada para facilitar: consulta de informações, edição de dados, cadastros, navegação entre funcionalidades principais.
+
+- Cada tela foi pensada para minimizar a carga cognitiva do usuário, exibindo apenas o que é necessário em cada contexto.
+
+---
 ### Wireframes
 
 [Inclua os wireframes das páginas principais da interface, mostrando a disposição dos elementos na página.]
@@ -24,7 +38,9 @@
 
 ## Considerações de Segurança
 
-[Discuta as considerações de segurança relevantes para a aplicação distribuída, como autenticação, autorização, proteção contra ataques, etc.]
+A implantação do aplicativo móvel e do backend foi estruturada para garantir estabilidade, escalabilidade e facilidade de manutenção. O backend, desenvolvido em Java/Spring Boot, é hospedado na plataforma Heroku, que realiza o deploy manual a partir do repositório Git, garantindo controle total sobre cada atualização. A aplicação mobile, construída em Kotlin com Jetpack Compose, é distribuída em formato APK para testes e validação funcional. O banco de dados PostgreSQL, também hospedado no Heroku, é integrado aos serviços do backend, permitindo persistência segura e consistente dos dados. Esse conjunto assegura um ambiente de implantação simples, funcional e adequado ao propósito acadêmico do projeto.
+
+---
 
 ## Implantação
 
