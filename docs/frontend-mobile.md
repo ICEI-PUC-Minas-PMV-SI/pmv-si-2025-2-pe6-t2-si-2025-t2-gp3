@@ -30,11 +30,11 @@ O uso de wireframes permitiu validar antecipadamente a experiência do usuário 
 
 ##### Tela Inicial
 
-![Tela Inicial](.\img\mobile-inicio.png)
+![Tela Inicial](./img/mobile-inicio.png)
 
 ##### Tela de Cadastro
 
-![Tela de Cadastro](.\img\mobile-cadastro.png)
+![Tela de Cadastro](./img/mobile-cadastro.png)
 
 ##### Tela de Login
 
@@ -42,7 +42,7 @@ O uso de wireframes permitiu validar antecipadamente a experiência do usuário 
 
 ##### Menu Principal
 
-![Menu Principal](.\img\mobile-menuPrincipal.png)
+![Menu Principal](./img/mobile-menuPrincipal.png)
 
 ##### Cronômetro
 
@@ -50,27 +50,27 @@ O uso de wireframes permitiu validar antecipadamente a experiência do usuário 
 
 ##### Perfil do Usuário
 
-![Perfil do Usuário](.\img\mobile-perfilUser.png)
+![Perfil do Usuário](./img/mobile-perfilUser.png)
 
 ##### Editar Perfil
 
-![Editar Perfil](.\img\mobile-editarPerfil.png)
+![Editar Perfil](./img/mobile-editarPerfil.png)
 
 ##### Meus Treinos
 
-![Meus Treinos](.\img\mobile-meusTreinos.png)
+![Meus Treinos](./img/mobile-meusTreinos.png)
 
 ##### Criar Novo Treino
 
-![Criar Novo Treino](.\img\mobile-criarTreino.png)
+![Criar Novo Treino](./img/mobile-criarTreino.png)
 
 ##### Criar Ficha
 
-![Criar Ficha](.\img\mobile-criarFicha.png)
+![Criar Ficha](./img/mobile-criarFicha.png)
 
 ##### Selecionar Exercícios
 
-![Selecionar Exercícios](.\img\mobile-selecionarExercicios.png)
+![Selecionar Exercícios](./img/mobile-selecionarExercicios.png)
 
 ### Design Visual
 
@@ -100,6 +100,33 @@ O logotipo em azul escuro sobre um círculo vermelho-alaranjado, simbolizando en
 **Geral**
 
 O design do GymFlow comunica **energia e modernidade**. A combinação de azul e verde reforça **confiança e progresso**, enquanto a tipografia e os ícones tornam a experiência **acessível e agradável**. O resultado é uma interface ideal para um app voltado à organização e acompanhamento de treinos.
+
+**Login**
+![Tela de Login](./img/TELA-DE-LOGIN.png)
+
+**Cadastro**
+![Tela de Cadastro](./img/TELA-DE-CADASTRO.png)
+
+**Tela Inicial**
+![Tela Inicial](./img/TELA-INICIAL.png)
+
+**Menu Inicial**
+![Menu Inicial](./img/MENU-INICIAL.png)
+
+**Perfil do Usuario**
+![Perfil Usuaril](./img/PERFIL-USUARIO.png)
+
+**Cadastro de Treino**
+![Cadastro de Treinos](./img/CADASTRO-DE-TREINOS.png)
+
+**Ficha de Treino**
+![Ficha de Treinos](./img/FICHA-DE-TREINO.png)
+
+**Exercicio da Ficha**
+![Exercicio da Ficha](./img/EXERCICIO-DE-FICHAS.png)
+
+**Cronometro**
+![Cronometro](./img/CRONOMETRO.png)
 
 ## Fluxo de Dados
 
@@ -208,17 +235,17 @@ O design do GymFlow comunica **energia e modernidade**. A combinação de azul e
 
 ## Tecnologias Utilizadas
 
-| Categoria                         | Tecnologia / Ferramenta                                   |
-|-----------------------------------|------------------------------------------------------------|
-| Linguagem                         | Kotlin                                                     |
-| Interface (UI)                    | Jetpack Compose                               |
-| Navegação                         | Navigation Compose                                         |
-| Assincronismo                     | Coroutines                                                 |
-| Consumo de API                    | Retrofit ou Ktor Client                                    |
-| Containerização                   | Docker                                                     |
-| Controle de Versão                | GitHub (repositório remoto)                                |
-| Hospedagem                        | Local                                                     |
-| Banco de Dados (via Backend)      | PostgreSQL                                                 |
+| Categoria                    | Tecnologia / Ferramenta     |
+| ---------------------------- | --------------------------- |
+| Linguagem                    | Kotlin                      |
+| Interface (UI)               | Jetpack Compose             |
+| Navegação                    | Navigation Compose          |
+| Assincronismo                | Coroutines                  |
+| Consumo de API               | Retrofit ou Ktor Client     |
+| Containerização              | Docker                      |
+| Controle de Versão           | GitHub (repositório remoto) |
+| Hospedagem                   | Local                       |
+| Banco de Dados (via Backend) | PostgreSQL                  |
 
 ---
 
