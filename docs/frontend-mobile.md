@@ -232,27 +232,77 @@ A implantação do aplicativo móvel e do backend foi estruturada para garantir 
 
 A implantação do aplicativo móvel e do backend foi estruturada para garantir estabilidade, escalabilidade e facilidade de manutenção. O backend, desenvolvido em Java/Spring Boot, é hospedado na plataforma Heroku, que realiza o deploy manual a partir do repositório Git, garantindo controle total sobre cada atualização. A aplicação mobile, construída em Kotlin com Jetpack Compose, é distribuída em formato APK para testes e validação funcional. O banco de dados PostgreSQL, também hospedado no Heroku, é integrado aos serviços do backend, permitindo persistência segura e consistente dos dados. Esse conjunto assegura um ambiente de implantação simples, funcional e adequado ao propósito acadêmico do projeto.
 
----
-
-1. Defina os requisitos de hardware e software necessários para implantar a aplicação em um ambiente de produção.
-2. Escolha uma plataforma de hospedagem adequada, como um provedor de nuvem ou um servidor dedicado.
-3. Configure o ambiente de implantação, incluindo a instalação de dependências e configuração de variáveis de ambiente.
-4. Faça o deploy da aplicação no ambiente escolhido, seguindo as instruções específicas da plataforma de hospedagem.
-5. Realize testes para garantir que a aplicação esteja funcionando corretamente no ambiente de produção.
-
 ## Testes
 
-[Descreva a estratégia de teste, incluindo os tipos de teste a serem realizados (unitários, integração, carga, etc.) e as ferramentas a serem utilizadas.]
+### Casos de Teste
 
-1. Crie casos de teste para cobrir todos os requisitos funcionais e não funcionais da aplicação.
-2. Implemente testes unitários para testar unidades individuais de código, como funções e classes.
-3. Realize testes de integração para verificar a interação correta entre os componentes da aplicação.
-4. Execute testes de carga para avaliar o desempenho da aplicação sob carga significativa.
-5. Utilize ferramentas de teste adequadas, como frameworks de teste e ferramentas de automação de teste, para agilizar o processo de teste.
+### 1. Página de Cadastro
 
-# Referências
+| Caso de Teste | Descrição                    | Entrada                       | Resultado Esperado                                                            | Status  |
+| ------------- | ---------------------------- | ----------------------------- | ----------------------------------------------------------------------------- | ------- |
+| CT-01         | Campos obrigatórios vazios   | Nome, email e senha em branco | Exibir popup “Preencha todos os campos!”                                      | Sucesso |
+| CT-02         | Email inválido               | usuario@teste                 | Exibir popup “Email inválido!”                                                | Sucesso |
+| CT-03         | Senha menor que 4 caracteres | 123                           | Exibir popup “A senha deve ter pelo menos 4 caracteres.”                      | Sucesso |
+| CT-04         | Email já cadastrado          | Email existente no banco      | Exibir popup “Este email já está cadastrado!”                                 | Sucesso |
+| CT-05         | Cadastro bem-sucedido        | Nome, email e senha válidos   | Exibir popup “Cadastro realizado com sucesso!” e registrar usuário no backend | Sucesso |
 
-Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
+### 2. Página de Login
+
+| Caso de Teste | Descrição                  | Entrada                  | Resultado Esperado                                                     | Status  |
+| ------------- | -------------------------- | ------------------------ | ---------------------------------------------------------------------- | ------- |
+| CT-06         | Campos obrigatórios vazios | Email e senha em branco  | Exibir popup “Preencha todos os campos!”                               | Sucesso |
+| CT-07         | Email inválido             | usuario@teste            | Exibir popup “Email inválido!”                                         | Sucesso |
+| CT-08         | Credenciais incorretas     | Email ou senha inválidos | Exibir popup “Email ou senha inválidos!”                               | Sucesso |
+| CT-09         | Login bem-sucedido         | Email e senha corretos   | Salvar token no armazenamento interno e redirecionar para Menu Inicial | Sucesso |
+
+### 3. Menu Inicial
+
+| Caso de Teste | Descrição                 | Entrada                      | Resultado Esperado                    | Status  |
+| ------------- | ------------------------- | ---------------------------- | ------------------------------------- | ------- |
+| CT-10         | Token inválido ou ausente | Token JWT inválido           | Redirecionar para Login               | Sucesso |
+| CT-11         | Seleção de Treinos        | Clique no botão Treinos      | Redirecionar para Listagem de Treinos | Sucesso |
+| CT-12         | Seleção de Perfil         | Clique no botão Perfil       | Redirecionar para Perfil do Usuário   | Sucesso |
+| CT-13         | Seleção de Criar Treino   | Clique no botão Criar Treino | Redirecionar para Criação de Treino   | Sucesso |
+
+### 4. Listagem de Treinos
+
+| Caso de Teste | Descrição                 | Entrada                        | Resultado Esperado                              | Status  |
+| ------------- | ------------------------- | ------------------------------ | ----------------------------------------------- | ------- |
+| CT-14         | Token ausente ou inválido | Token JWT inválido             | Redirecionar para Login                         | Sucesso |
+| CT-15         | Nenhum treino cadastrado  | Nenhum treino no banco         | Exibir mensagem “Nenhum treino cadastrado”      | Sucesso |
+| CT-16         | Treinos existentes        | Treinos cadastrados no backend | Renderizar lista com nome, data de início e fim | Sucesso |
+| CT-17         | Seleção de treino         | Clique em um treino            | Redirecionar para Listagem de Fichas            | Sucesso |
+
+### 5. Listagem de Fichas
+
+| Caso de Teste | Descrição         | Entrada                       | Resultado Esperado                           | Status  |
+| ------------- | ----------------- | ----------------------------- | -------------------------------------------- | ------- |
+| CT-18         | Treino sem fichas | Treino selecionado sem fichas | Exibir mensagem “Nenhuma ficha cadastrada”   | Sucesso |
+| CT-19         | Fichas existentes | Fichas cadastradas no backend | Renderizar lista de fichas com dia da semana | Sucesso |
+| CT-20         | Seleção de ficha  | Clique em uma ficha           | Redirecionar para Exercícios da Ficha        | Sucesso |
+
+### 6. Exercícios de Ficha
+
+| Caso de Teste | Descrição             | Entrada                           | Resultado Esperado                                                   | Status  |
+| ------------- | --------------------- | --------------------------------- | -------------------------------------------------------------------- | ------- |
+| CT-21         | Ficha sem exercícios  | Ficha selecionada sem exercícios  | Exibir mensagem “Nenhum exercício cadastrado”                        | Sucesso |
+| CT-22         | Exercícios existentes | Exercícios cadastrados no backend | Renderizar lista de exercícios com nome, carga, repetições, descanso | Sucesso |
+| CT-23         | Adição de exercício   | Novo exercício preenchido         | Cadastrar no backend e atualizar lista                               | Sucesso |
+
+### 7. Criação de Treino
+
+| Caso de Teste | Descrição                | Entrada                                | Resultado Esperado                                                                     | Status  |
+| ------------- | ------------------------ | -------------------------------------- | -------------------------------------------------------------------------------------- | ------- |
+| CT-24         | Treino sem nome          | Campo de nome vazio                    | Exibir popup “Preencha o nome do treino”                                               | Sucesso |
+| CT-25         | Criação de treino válido | Nome do treino + seleção de exercícios | Criar treino no backend, criar ficha e incluir exercícios → Exibir mensagem de sucesso | Sucesso |
+
+### 8. Perfil do Usuário
+
+| Caso de Teste | Descrição              | Entrada                           | Resultado Esperado                                                  | Status  |
+| ------------- | ---------------------- | --------------------------------- | ------------------------------------------------------------------- | ------- |
+| CT-26         | Token inválido         | Token JWT ausente ou inválido     | Redirecionar para Login                                             | Sucesso |
+| CT-27         | Visualização de perfil | Usuário acessa tela de perfil     | Buscar dados no backend e preencher tela                            | Sucesso |
+| CT-28         | Edição de dados        | Alteração de nome, email ou idade | Enviar dados atualizados → Retorno de sucesso → Atualizar interface | Sucesso |
 
 # Planejamento
 
