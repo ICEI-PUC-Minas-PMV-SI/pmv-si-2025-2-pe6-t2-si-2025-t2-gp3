@@ -102,30 +102,39 @@ O logotipo em azul escuro sobre um círculo vermelho-alaranjado, simbolizando en
 O design do GymFlow comunica **energia e modernidade**. A combinação de azul e verde reforça **confiança e progresso**, enquanto a tipografia e os ícones tornam a experiência **acessível e agradável**. O resultado é uma interface ideal para um app voltado à organização e acompanhamento de treinos.
 
 **Login**
+
 ![Tela de Login](./img/TELA-DE-LOGIN.png)
 
 **Cadastro**
+
 ![Tela de Cadastro](./img/TELA-DE-CADASTRO.png)
 
 **Tela Inicial**
+
 ![Tela Inicial](./img/TELA-INICIAL.png)
 
 **Menu Inicial**
+
 ![Menu Inicial](./img/MENU-INICIAL.png)
 
 **Perfil do Usuario**
+
 ![Perfil Usuaril](./img/PERFIL-USUARIO.png)
 
 **Cadastro de Treino**
+
 ![Cadastro de Treinos](./img/CADASTRO-DE-TREINOS.png)
 
 **Ficha de Treino**
+
 ![Ficha de Treinos](./img/FICHA-DE-TREINO.png)
 
 **Exercicio da Ficha**
+
 ![Exercicio da Ficha](./img/EXERCICIO-DE-FICHAS.png)
 
 **Cronometro**
+
 ![Cronometro](./img/CRONOMETRO.png)
 
 ## Fluxo de Dados
