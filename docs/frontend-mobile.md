@@ -24,7 +24,53 @@ A interface foi projetada seguindo os princípios do Material Design, adaptados 
 
 ### Wireframes
 
-[Inclua os wireframes das páginas principais da interface, mostrando a disposição dos elementos na página.]
+Os wireframes a seguir representam o esboço visual das principais telas do GymFlow, aplicativo mobile voltado à organização e acompanhamento de treinos. Esta etapa teve como objetivo definir a estrutura visual e funcional do sistema, facilitando a visualização do fluxo de navegação do usuário entre as telas de login, menu inicial, cronômetro e perfil.
+
+O uso de wireframes permitiu validar antecipadamente a experiência do usuário (UX), garantindo que a disposição dos elementos na interface seja intuitiva, acessível e coerente com a proposta do aplicativo. A seguir, são apresentados os wireframes desenvolvidos para o GymFlow, que serviram de base para o desenvolvimento do protótipo funcional:
+
+##### Tela Inicial
+
+![Tela Inicial](.\img\mobile-inicio.png)
+
+##### Tela de Cadastro
+
+![Tela de Cadastro](.\img\mobile-cadastro.png)
+
+##### Tela de Login
+
+![Tela de Login](./img/mobile-login.png)
+
+##### Menu Principal
+
+![Menu Principal](.\img\mobile-menuPrincipal.png)
+
+##### Cronômetro
+
+![Cronômetro](./img/mobile-cronometro.png)
+
+##### Perfil do Usuário
+
+![Perfil do Usuário](.\img\mobile-perfilUser.png)
+
+##### Editar Perfil
+
+![Editar Perfil](.\img\mobile-editarPerfil.png)
+
+##### Meus Treinos
+
+![Meus Treinos](.\img\mobile-meusTreinos.png)
+
+##### Criar Novo Treino
+
+![Criar Novo Treino](.\img\mobile-criarTreino.png)
+
+##### Criar Ficha
+
+![Criar Ficha](.\img\mobile-criarFicha.png)
+
+##### Selecionar Exercícios
+
+![Selecionar Exercícios](.\img\mobile-selecionarExercicios.png)
 
 ### Design Visual
 
@@ -162,7 +208,19 @@ O design do GymFlow comunica **energia e modernidade**. A combinação de azul e
 
 ## Tecnologias Utilizadas
 
-[Lista das tecnologias principais que serão utilizadas no projeto.]
+| Categoria                         | Tecnologia / Ferramenta                                   |
+|-----------------------------------|------------------------------------------------------------|
+| Linguagem                         | Kotlin                                                     |
+| Interface (UI)                    | Jetpack Compose                               |
+| Navegação                         | Navigation Compose                                         |
+| Assincronismo                     | Coroutines                                                 |
+| Consumo de API                    | Retrofit ou Ktor Client                                    |
+| Containerização                   | Docker                                                     |
+| Controle de Versão                | GitHub (repositório remoto)                                |
+| Hospedagem                        | Local                                                     |
+| Banco de Dados (via Backend)      | PostgreSQL                                                 |
+
+---
 
 ## Considerações de Segurança
 
