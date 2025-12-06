@@ -27,27 +27,28 @@ O uso de wireframes permitiu validar antecipadamente a experiência do usuário 
 
 ![Tela de Login](./img/wiri-login.jpeg)
 
-##### Tela Início
+##### Tela de Perfil
 
-![Tela de Gráficos](./img/wiri-inicio.jpeg)
+![Tela de Perfil](./img/wiri-perfil.jpeg)
 
 ##### Tela de Fichas
 
 ![Tela de Fichas](./img/wiri-fichas.jpeg)
 
+##### Cadastro de Fichas
+
+![Tela de Gráficos](./img/wiri-graficos.jpeg)
+
 ##### Tela de Estatísticas
 
-![Tela de Estatísticas](./img/wiri-graficos.jpeg)
-
-##### Tela de Perfil
-
-![Tela de Perfil](./img/wiri-perfil.png)
+![Tela de Estatísticas](./img/wiri-perfil.jpeg)
 
 ##### Iconografia
 
 <p align ="center">
   <img src="./img/icon1.jpeg" alt="Icon 1" width="150"><br>
   <img src="./img/icon2.jpeg" alt="Icon 2" width="150"><br>
+  <img src="./img/icon3.jpeg" alt="Icon 3" width="150">
 </p>
 
 
@@ -75,37 +76,45 @@ O uso de wireframes permitiu validar antecipadamente a experiência do usuário 
 | 4 | API | Front-end | JSON | Retorno de token JWT ou mensagem de erro |
 | 5 | Front-end | LocalStorage | String | Armazenamento do token JWT |
 | 6 | Front-end | Página Principal | URL | Caminho de redirecionamento após login |
+| 7 | Usuário | API `/api/---/--` | JSON | Dados para redefinição de senha |
+| 8 | Front-end | Usuário | Texto (mensagem) | Feedback visual de sucesso ou erro |
 
 ### 3. Página do Usuário
 
 | Etapa | Origem | Destino | Tipo de Dado | Descrição |
 |-------|---------|----------|---------------|------------|
 | 1 | Front-end | LocalStorage | String | Verificação do token JWT armazenado para autenticação |
-| 2 | Front-end | API `/api/usuarios` | JSON | Requisição GET para carregar os dados do usuário autenticado |
+| 2 | Front-end | API `/api/usuarios/---` | JSON | Requisição GET para carregar os dados do usuário autenticado |
 | 3 | API | Front-end | JSON | Retorno com informações do usuário (nome, email, idade, altura, peso) |
 | 4 | Front-end | Interface | Texto / Numérico | Preenchimento dos campos de perfil com os dados recebidos |
-| 5 | Usuário | Front-end | Texto / Númerico | Edição de dados pessoais e confirmação de salvamento |
-| 6 | Front-end | API `/api/usuarios/{id}` | JSON | Envio dos dados atualizados do perfil |
+| 5 | Usuário | Front-end | Texto / Número | Edição de dados pessoais e confirmação de salvamento |
+| 6 | Front-end | API `/api/usuarios/---` | JSON | Envio dos dados atualizados do perfil |
 | 7 | API | Front-end | JSON | Resposta de sucesso ou erro da atualização |
 | 8 | Front-end | Interface | Texto (mensagem) | Exibição de popup informando o status do salvamento |
-| 9 | Front-end | API `/api/usuarios/{id}/metas` | JSON | Requisição GET para carregar metas cadastradas |
+| 9 | Front-end | API `/---` | JSON | Requisição GET para carregar metas cadastradas |
 | 10 | API | Front-end | JSON | Retorno com lista de metas existentes |
-| 11 | Usuário | Front-end | texto | Inserção de nova meta pelo modal |
-| 12 | Front-end | API `/api/usuarios/{id}/metas` | JSON | Envio da nova meta  |
-| 13 | API | Front-end | JSON | Retorno da meta criada |
-| 14 | Usuário | Front-end | Texto / Númerico | Edição da meta |
-| 15 | Front-end | API `/api/usuarios/{id}/metas` | JSON | Envio dos dados atualizados da meta |
-| 16 | Front-end | Interface | Texto / Numérico | Atualização automática do IMC com base em peso e altura |
-| 17 | Usuário | Front-end | Evento | Clique em “Sair” limpa o estado e redireciona para a página inicial |
+| 11 | Usuário | Front-end | Texto | Inserção de nova meta no campo de texto |
+| 12 | Front-end | API `/----` | JSON | Envio da nova meta  |
+| 13 | API | Front-end | JSON | Retorno da meta criada (id, texto, status) |
+| 14 | Usuário | Front-end | Booleano | Marcação de meta como concluída (checkbox) |
+| 15 | Front-end | API `/---/--` | JSON | Atualização do status da meta  |
+| 16 | Usuário | Front-end | Evento | Exclusão manual de meta |
+| 17 | Front-end | API `/---/--` | Nenhum (DELETE) | Requisição para excluir a meta selecionada |
+| 18 | API | Front-end | Código HTTP | Retorno de sucesso ou erro na exclusão |
+| 19 | Front-end | Interface | Texto / Numérico | Atualização automática do IMC com base em peso e altura |
+| 20 | Usuário | Front-end | Evento | Clique em “Sair” limpa o estado e redireciona para a página inicial |
 
 ### 4. Menu Principal
 
 | Etapa | Origem | Destino | Tipo de Dado | Descrição |
 |-------|---------|----------|---------------|------------|
-| 1 | Front-end | LocalStorage | Texto | Cadastrar uma ficha teste de treino |
-| 2 | Front-end | LocalStorage | Texto | Cadastrar um exercício teste de treino |
-| 3 | Front-end | LocalStorage | Texto | Remover Ficha adicionada |
-| 4 | Front-end | LocalStorage | Texto | Remover Exercício teste adicionado |
+| 1 | Front-end | API | JSON | Cadastrar treino |
+| 2 | Front-end | API | JSON | Cadastrar uma data para a ficha |
+| 3 | Front-end | API | JSON | adicionar exercício para a ficha |
+| 4 | Front-end | API | JSON | Remover Exercício teste adicionado |
+| 5 | Front-end | Front-end | Retorno | Mover para o perfil do usuário |
+| 6 | Front-end | Front-end | Retorno | Mover diretamente para o fim da página |
+| 7 | Front-end | Front-end | Retorno | voltar opção selecionada na ficha |
 
 ### 5. Estatísticas
 
@@ -162,7 +171,7 @@ O design do GymFlow comunica **energia e modernidade**. A combinação de azul e
 
 **Perfil do Usuário**
 
-![PERFIL DO USUARIO](./img/PERFIL-DO-USUARIO.png)
+![PERFIL DO USUARIO](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t2-si-2025-t2-gp3/raw/main/docs/img/PERFIL%20DO%20USUARIO.png)
 
 **Home Page**
 
@@ -211,8 +220,8 @@ A aplicação web será implantada na plataforma Vercel, conforme especificado n
 | CT-01         | Campos obrigatórios vazios   | Nome, email e senha em branco | Exibir popup “Preencha todos os campos!”                                      | ![print CT-01](img/fwct01.png) | Sucesso |
 | CT-02         | Email inválido               | `usuario@teste`               | Exibir popup “Email inválido!”                                                | ![print CT-01](img/fwct02.png) | Sucesso |
 | CT-03         | Senha menor que 4 caracteres | `123`                         | Exibir popup “A senha deve ter pelo menos 4 caracteres.”                      | ![print CT-03](img/fwct03.png) | Sucesso |
-| CT-04         | Email já cadastrado          | Email existente no banco      | Exibir popup “Este email já está cadastrado!”                                 | ![print CT-04](img/fwct04.png) | Sucesso |
-| CT-05         | Cadastro bem-sucedido        | Nome, email e senha válidos   | Exibir popup “Cadastro realizado com sucesso!” e registrar usuário no backend | ![print CT-05](img/fwct05.png) | Sucesso |
+| CT-04         | Email já cadastrado          | Email existente no banco      | Exibir popup “Este email já está cadastrado!”                                 | ![print CT-04](img/fwct03.png) | Sucesso |
+| CT-05         | Cadastro bem-sucedido        | Nome, email e senha válidos   | Exibir popup “Cadastro realizado com sucesso!” e registrar usuário no backend | ![print CT-05](img/fwct03.png) | Sucesso |
 
 ### 2. Página de Login
 
@@ -220,32 +229,43 @@ A aplicação web será implantada na plataforma Vercel, conforme especificado n
 
 | Caso de Teste | Descrição                  | Entrada                  | Resultado Esperado                                             | Print da Execução              | Status  |
 | ------------- | -------------------------- | ------------------------ | -------------------------------------------------------------- | ------------------------------ | ------- |
-| CT-06         | Campos obrigatórios vazios | Email e senha em branco  | Exibir popup “Preencha todos os campos!”                       | ![print CT-06](img/fwct06.png) | Sucesso |
-| CT-07         | Email inválido             | `usuario@teste`          | Exibir popup “Email inválido!”                                 | ![print CT-07](img/fwct07.png) | Sucesso |
-| CT-08         | Credenciais incorretas     | Email ou senha inválidos | Exibir popup “Email ou senha inválidos!”                       | ![print CT-08](img/fwct08.png) | Sucesso |
-| CT-09         | Login bem-sucedido         | Email e senha corretos   | Salvar token no localStorage e redirecionar para MenuPrincipal | ![print CT-09](img/fwct09.png) | Sucesso |
+| CT-06         | Campos obrigatórios vazios | Email e senha em branco  | Exibir popup “Preencha todos os campos!”                       | ![print CT-06](img/fwct03.png) | Sucesso |
+| CT-07         | Email inválido             | `usuario@teste`          | Exibir popup “Email inválido!”                                 | ![print CT-07](img/fwct03.png) | Sucesso |
+| CT-08         | Credenciais incorretas     | Email ou senha inválidos | Exibir popup “Email ou senha inválidos!”                       | ![print CT-08](img/fwct03.png) | Sucesso |
+| CT-09         | Login bem-sucedido         | Email e senha corretos   | Salvar token no localStorage e redirecionar para MenuPrincipal | ![print CT-09](img/fwct03.png) | Sucesso |
+
+### Funcionalidade: Redefinir senha
+
+| Caso de Teste | Descrição                  | Entrada                           | Resultado Esperado                                       | Print da Execução | Status                                               |
+| ------------- | -------------------------- | --------------------------------- | -------------------------------------------------------- | ----------------- | ---------------------------------------------------- |
+| CT-10         | Campos obrigatórios vazios | Nome, email ou senha vazios       | Exibir popup “Preencha todos os campos!”                 | -                 | API para redefinição de senha ainda não implementada |
+| CT-11         | Email inválido             | `email@teste`                     | Exibir popup “Email inválido!”                           | -                 | API para redefinição de senha ainda não implementada |
+| CT-12         | Senha muito curta          | `123`                             | Exibir popup “A senha deve ter pelo menos 4 caracteres.” | -                 | API para redefinição de senha ainda não implementada |
+| CT-13         | Redefinição bem-sucedida   | Nome e email válidos + nova senha | Exibir popup “Senha redefinida com sucesso!”             | -                 | API para redefinição de senha ainda não implementada |
+| CT-14         | Nome/email inexistente     | Dados não encontrados             | Exibir popup “Email ou nome inválidos!”                  | -                 | API para redefinição de senha ainda não implementada |
 
 ### 3. Página do Usuário
 
 ### Funcionalidade: Editar e salvar dados pessoais
 
 | Caso de Teste | Descrição                | Entrada                         | Resultado Esperado                                     | Print da Execução | Status                                            |
-| ------------- | ------------------------ | ------------------------------- | ------------------------------------------------------ | ----------------- | --------------------------------------------------|
-| CT-10         | Editar campos vazios     | Nome em branco         | Exibir popup “Insira um nome.” | ![print CT-10](img/fwct10.png)                | sucesso |
-| CT-11         | Valores inválidos        | peso ou altura negativos | Exibir popup “Insira um peso válido.”      | ![print CT-11](img/fwct11.png)                 | sucesso |
-| CT-12         | Atualização bem-sucedida | Todos os campos válidos         | Exibir popup “Salvo com sucesso!”               | ![print CT-12](img/fwct12.png)             | sucesso |
+| ------------- | ------------------------ | ------------------------------- | ------------------------------------------------------ | ----------------- | -------------------------------------------------- | -------------------------------------------------- |
+| CT-17         | Editar campos vazios     | Nome ou email em branco         | Exibir popup “Por favor, insira um nome/email válido.” | -                 | API para edição de usuarios ainda não implementada |
+| CT-18         | Valores inválidos        | Idade, peso ou altura negativos | Exibir popup “Por favor, insira valores válidos.”      | -                 | API para edição de usuarios ainda não implementada |
+| CT-19         | Atualização bem-sucedida | Todos os campos válidos         | Exibir popup “Dados salvos com sucesso!”               | print             | -                                                  | API para edição de usuarios ainda não implementada |
 
 ### Funcionalidade: Metas do Usuário
 
 | Caso de Teste | Descrição         | Entrada                    | Resultado Esperado                     | Print da Execução              | Status                                             |
 | ------------- | ----------------- | -------------------------- | -------------------------------------- | ------------------------------ | -------------------------------------------------- |
-| CT-13         | Criar meta vazia  | Campo de textos vazio       | Popup informando para preencher o campo em branco | ![print CT-13](img/fwct13.png) | Sucesso                                            |
-| CT-14         | Criar meta válida | campos preenchidos          | Adicionar meta à lista                 | ![print CT-14](img/fwct14.png) | sucesso                                               |
-| CT-15         | Editar Meta      | Clicar no ícone do pincel | edita meta no frontend e no backend     | ![print CT-15](img/fwct15.png)                              | sucesso |
+| CT-20         | Criar meta vazia  | Campo de texto vazio       | Exibir popup “Digite uma meta válida!” | ![print CT-20](img/fwct20.png) | Sucesso                                            |
+| CT-21         | Criar meta válida | Texto preenchido           | Adicionar meta à lista                 | ![print CT-21](img/fwct21.png) | ERRO                                               |
+| CT-22         | Concluir meta     | Marcar checkbox            | Atualizar estado da meta no backend    | -                              | API para edição de usuarios ainda não implementada |
+| CT-23         | Deletar meta      | Clicar no ícone de lixeira | Remover meta da lista e do backend     | -                              | API para edição de usuarios ainda não implementada |
 
 ### Funcionalidade: IMC do Usuário
 
 | Caso de Teste | Descrição              | Entrada                 | Resultado Esperado          | Print da Execução | Status                                             |
 | ------------- | ---------------------- | ----------------------- | --------------------------- | ----------------- | -------------------------------------------------- |
-| CT-16         | Cálculo correto do IMC | Peso 70kg, Altura 170cm | Exibir IMC = 24.22 (Normal) | ![print CT-16](img/fwct16.png)                 | sucesso |
+| CT-24         | Cálculo correto do IMC | Peso 70kg, Altura 170cm | Exibir IMC = 24.22 (Normal) | -                 | API para edição de usuarios ainda não implementada |
 
